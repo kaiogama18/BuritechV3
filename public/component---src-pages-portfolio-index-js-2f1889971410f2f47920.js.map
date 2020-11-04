@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/pages/portfolio/index.js"],"names":["Home"],"mappings":"6FAAA,wEAEe,SAASA,IACtB,OAAO","file":"component---src-pages-portfolio-index-js-2f1889971410f2f47920.js","sourcesContent":["import React from \"react\"\r\n\r\nexport default function Home() {\r\n  return <div>Serviços</div>\r\n}\r\n"],"sourceRoot":""}

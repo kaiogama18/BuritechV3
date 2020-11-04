@@ -1,21 +1,15 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.com/docs/gatsby-config/
- */
 const siteMetadata = require('./config/metadata')
-
 module.exports = {
-  /* Your site config here */
   siteMetadata,
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-nprogress`,
       options: {
-        // Setting a color is optional.
         color: `tomato`,
-        // Disable the loading spinner.
         showSpinner: false,
       },
     },
@@ -31,6 +25,26 @@ module.exports = {
         theme_color: `#a2466c`,
         display: `standalone`,
         icon: 'src/assets/icon.png' 
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: 'assets',
+        path: `${__dirname}/src/assets`,
+      }
+    },
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        displayName: process.env.NODE_ENV != 'production'
+      },
+    },
+    {
+      resolve: `gatsby-plugin-page-creator`,
+      options: {
+        path: `${__dirname}/src/pages`,
+        ignore: [`**/styles.js`],
       },
     },
     `gatsby-plugin-offline`

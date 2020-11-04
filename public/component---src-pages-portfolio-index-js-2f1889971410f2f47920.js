@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{"533F":function(n,e,t){"use strict";t.r(e),t.d(e,"default",(function(){return i}));var r=t("q1tI"),u=t.n(r);function i(){return u.a.createElement("div",null,"Serviços")}}}]);
+//# sourceMappingURL=component---src-pages-portfolio-index-js-2f1889971410f2f47920.js.map

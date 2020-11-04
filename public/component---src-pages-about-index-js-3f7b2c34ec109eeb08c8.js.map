@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/pages/about/index.js"],"names":["Home"],"mappings":"2FAAA,wEAEe,SAASA,IACtB,OAAO","file":"component---src-pages-about-index-js-3f7b2c34ec109eeb08c8.js","sourcesContent":["import React from \"react\"\r\n\r\nexport default function Home() {\r\n  return <div>Quem Somos</div>\r\n}\r\n"],"sourceRoot":""}
