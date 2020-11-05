@@ -29,7 +29,6 @@ export const Navbar = styled.div`
             cursor: pointer;
         }
         a {
-        font-size: 500;
         font-weight: 500;
         text-decoration: none;
         font-family: system-ui;
