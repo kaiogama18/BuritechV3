@@ -2,5 +2,7 @@ import React from "react"
 import { Container } from './styles'
 
 export default function Home() {
-  return <Container><div>Hello world! Buriterch</div></Container>
+  return <Container><h1>Buriterch - site version 3</h1></Container>
 }
+
+

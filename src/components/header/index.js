@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar } from './styles'
+import { Navbar, Contact } from './styles'
 // import { Link, graphql, useStaticQuery } from 'gatsby';
 import { Link } from 'gatsby';
 // import Img from "gatsby-image"
@@ -16,20 +16,27 @@ export default function Header() {
   //     }
   //   }
   // `)
-  return <Navbar>
-    <header>
+  return <header>
+    <Contact>
+      <div>
+        <p>Telefone: (92)99189-1906</p>
+        <p>Email: contato@buritech.com.br</p>
+        <p>Endereço: UFAM, Av.Octávio Hamilton Botelho Mourão - Coroado, Manaus - AM</p>
+      </div>
+      <div>
+        <p>Acompanhe nossas redes sociais</p>
+      </div>
+    </Contact>
+    <Navbar>
       <nav>
-        <ul>
-          <li><Link to="/">Teams</Link></li>
-          <li><Link to="/">News</Link></li>
-        </ul>
-        {/* <Img fixed={data.file.childImageSharp.fixed} /> */}
-        <ul>
-          <li><Link to="/">Company</Link></li>
-          <li><Link to="/about">About</Link></li>
-        </ul>
+        <Link to="/">Home</Link>
+        <Link to="/about">Quem Somos</Link>
+        {/* <li><Img fixed={data.file.childImageSharp.fixed} /></li> */}
+        <Link to="/portfolio">Serviços</Link>
+        <Link to="/contact">Contato</Link>
       </nav>
-    </header>
-  </Navbar>
+    </Navbar>
+
+  </header>
 }
 
