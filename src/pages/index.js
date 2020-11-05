@@ -1,5 +1,6 @@
 import React from "react"
+import { Container } from './styles'
 
 export default function Home() {
-  return <div>Hello world!</div>
+  return <Container><div>Hello world! Buriterch</div></Container>
 }

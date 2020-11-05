@@ -1,5 +1,10 @@
-import React from "react"
+import React from 'react';
+import { Container } from './styles'
 
-export default function Home() {
-  return <div>Quem Somos</div>
+export default function About() {
+    return <Container>
+        <h1>teste</h1>
+    </Container>
 }
+
+

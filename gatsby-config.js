@@ -21,7 +21,7 @@ module.exports = {
         description: `Nossa lema é desenvolver soluções tecnológicas da Amazônia para o Mundo`,
         lang: `pt-br`,
         start_url: `/`,
-        background_color: `#f7f0eb`,
+        background_color: `#fff`,
         theme_color: `#a2466c`,
         display: `standalone`,
         icon: 'src/assets/icon.png' 
