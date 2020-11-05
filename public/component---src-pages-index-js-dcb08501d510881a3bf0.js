@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{RXBc:function(n,e,t){"use strict";t.r(e),t.d(e,"default",(function(){return i}));var r=t("q1tI"),o=t.n(r),c=t("vOnD").default.div.withConfig({componentId:"ibc00p-0"})(["color:",""],(function(n){return n.theme.primary}));function i(){return o.a.createElement(c,null,o.a.createElement("div",null,"Hello world! Buriterch"))}}}]);
+//# sourceMappingURL=component---src-pages-index-js-dcb08501d510881a3bf0.js.map

@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{O0dG:function(n,e,t){"use strict";t.r(e),t.d(e,"default",(function(){return c}));var r=t("q1tI"),u=t.n(r),o=t("vOnD").default.div.withConfig({componentId:"rgvugk-0"})(["color:",""],(function(n){return n.theme.primary}));function c(){return u.a.createElement(o,null,u.a.createElement("h1",null,"teste"))}}}]);
+//# sourceMappingURL=component---src-pages-about-index-js-e78f3296d38df2b9b4c1.js.map
