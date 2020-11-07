@@ -47,6 +47,12 @@ module.exports = {
         ignore: [`**/styles.js`],
       },
     },
+    {
+      resolve: "gatsby-plugin-netlify-cache",
+      options: {
+        cachePublic: true
+      }
+    },
     `gatsby-plugin-offline`
   ],
 }
