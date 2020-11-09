@@ -9,6 +9,7 @@ export const Contact = styled.div`
     background-color: ${props => props.theme.dark};
     div {
         display: flex;
+        flex-wrap: wrap;
         p {
             margin: 10px;
             padding: 0 20px;
