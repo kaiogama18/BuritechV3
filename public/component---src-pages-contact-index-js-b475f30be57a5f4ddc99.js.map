@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/pages/contact/index.js"],"names":[],"mappings":"2FAAA,gCAEe,qBACb,OACE","file":"component---src-pages-contact-index-js-b475f30be57a5f4ddc99.js","sourcesContent":["import React from \"react\"\r\n\r\nexport default () => {\r\n  return (\r\n    <h1>Contato</h1>\r\n  )\r\n}\r\n"],"sourceRoot":""}

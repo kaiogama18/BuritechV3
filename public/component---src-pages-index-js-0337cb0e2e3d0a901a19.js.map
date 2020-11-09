@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/pages/index.js"],"names":[],"mappings":"2FAAA,gCAEe,qBACb,OACE","file":"component---src-pages-index-js-0337cb0e2e3d0a901a19.js","sourcesContent":["import React from \"react\"\r\n\r\nexport default () => {\r\n  return (\r\n    <h1>Buriterch </h1>\r\n  )\r\n}\r\n\r\n\r\n"],"sourceRoot":""}

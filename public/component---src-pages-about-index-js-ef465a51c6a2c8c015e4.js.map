@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/pages/about/index.js"],"names":[],"mappings":"2FAAA,gCAEe,qBACX,OACI","file":"component---src-pages-about-index-js-ef465a51c6a2c8c015e4.js","sourcesContent":["import React from 'react';\r\n\r\nexport default () => {\r\n    return (\r\n        <h1>Quem somos</h1>\r\n    )\r\n}\r\n\r\n\r\n"],"sourceRoot":""}

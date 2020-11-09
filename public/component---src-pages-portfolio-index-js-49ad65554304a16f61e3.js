@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{"533F":function(n,t,e){"use strict";e.r(t);var o=e("q1tI"),r=e.n(o);t.default=function(){return r.a.createElement("h1",null,"Portfolio")}}}]);
+//# sourceMappingURL=component---src-pages-portfolio-index-js-49ad65554304a16f61e3.js.map

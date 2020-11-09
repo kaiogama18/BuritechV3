@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{RXBc:function(n,e,t){"use strict";t.r(e);var c=t("q1tI"),r=t.n(c);e.default=function(){return r.a.createElement("h1",null,"Buriterch ")}}}]);
+//# sourceMappingURL=component---src-pages-index-js-0337cb0e2e3d0a901a19.js.map

@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/pages/portfolio/index.js"],"names":[],"mappings":"6FACA,gCAEe,qBACb,OACE","file":"component---src-pages-portfolio-index-js-49ad65554304a16f61e3.js","sourcesContent":["\r\nimport React from \"react\"\r\n\r\nexport default () => {\r\n  return (\r\n    <h1>Portfolio</h1>\r\n  )\r\n}\r\n\r\n\r\n"],"sourceRoot":""}
