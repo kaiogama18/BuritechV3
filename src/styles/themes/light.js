@@ -4,5 +4,6 @@ export default {
     secondary: '#525659',
     fontColor: '#555',
     neutral: '#f0a500',
-    background: '#f4f6f7',
+    // background: '#f4f6f7',
+    background: '#fff',
 }

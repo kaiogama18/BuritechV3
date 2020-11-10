@@ -18,4 +18,8 @@ export const Footer = styled.div`
         text-transform: uppercase;
         transition: all 0.3s ease 0s;
     }
+
+    @media screen and (max-width: 600px) {
+        // position: initial;
+    }
 `;

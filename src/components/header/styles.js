@@ -12,6 +12,11 @@ export const Contact = styled.div`
         flex-wrap: wrap;
         justify-content: space-between;
     }
+
+    @media screen and (max-width: 600px) {
+        display: none;
+    }
+
 `;
 
 
