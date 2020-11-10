@@ -21,10 +21,10 @@ module.exports = {
         description: `Nossa lema é desenvolver soluções tecnológicas da Amazônia para o Mundo`,
         lang: `pt-br`,
         start_url: `/`,
-        background_color: `#fff`,
-        theme_color: `#a2466c`,
+        background_color: `#520003`,
+        theme_color: `#520003`,
         display: `standalone`,
-        icon: 'src/assets/icon.png' 
+        icon: 'src/assets/icon.png'
       },
     },
     {
@@ -53,6 +53,14 @@ module.exports = {
         cachePublic: true
       }
     },
-    `gatsby-plugin-offline`
+    {
+      resolve: 'gatsby-plugin-offline',
+      options: {
+        workboxConfig: {
+          globPatterns: ['**/icon-path*']
+        }
+      }
+    }
+
   ],
 }
