@@ -19,6 +19,10 @@ export const Footer = styled.div`
         transition: all 0.3s ease 0s;
     }
 
+    @media screen and (max-width: 992px) {
+        // position: initial;
+    }
+
     @media screen and (max-width: 600px) {
         // position: initial;
     }

@@ -13,6 +13,10 @@ export const Contact = styled.div`
         justify-content: space-between;
     }
 
+    @media screen and (max-width: 992px) {
+        font-size: 65%; 
+    }
+
     @media screen and (max-width: 600px) {
         display: none;
     }
@@ -45,6 +49,12 @@ export const Navbar = styled.div`
         }
         a:hover {
             color: ${props => props.theme.neutral};
+        }
+
+        @media screen and (max-width: 600px) {
+            .link{
+                display: none;
+            }
         }
         
     }    

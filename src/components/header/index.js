@@ -30,12 +30,13 @@ export default () => {
     <Navbar>
       <Wrapper>
         <nav>
-          <Link to="/">Home</Link>
-          <Link to="/about">Quem Somos</Link>
+          <Link className="link" className="link" to="/">Home</Link>
+          <Link className="link"  to="/about">Quem Somos</Link>
           <Link to="/"><Img fixed={data.file.childImageSharp.fixed} /></Link>
           <Link to="/portfolio">Serviços</Link>
           <Link to="/contact">Contato</Link>
         </nav>
+        
       </Wrapper>
 
     </Navbar>
