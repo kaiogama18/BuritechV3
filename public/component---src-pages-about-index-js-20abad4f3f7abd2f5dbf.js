@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{O0dG:function(n,e,t){"use strict";t.r(e);var o=t("q1tI"),u=t.n(o);e.default=function(){return u.a.createElement("h1",null,"Quem somos")}}}]);
+//# sourceMappingURL=component---src-pages-about-index-js-20abad4f3f7abd2f5dbf.js.map

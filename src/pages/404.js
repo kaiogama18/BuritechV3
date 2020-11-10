@@ -1,6 +1,6 @@
 import React from 'react';
 import Img from "gatsby-image"
-import { Container, NotFound, Button } from './styles'
+import { Container, NotFound } from './styles'
 import { Link, graphql, useStaticQuery } from 'gatsby';
 
 export default () => {

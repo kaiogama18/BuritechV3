@@ -7,7 +7,7 @@ import Img from "gatsby-image"
 export default () => {
   
   const data = useStaticQuery(graphql`
-    query MyQuery {
+    query photo {
       file(relativePath: { eq: "logo.png" }) {
         childImageSharp {
           fixed(width: 104) {
@@ -30,17 +30,14 @@ export default () => {
     <Navbar>
       <Wrapper>
         <nav>
-          <Link className="link" className="link" to="/">Home</Link>
+          <Link className="link" to="/">Home</Link>
           <Link className="link"  to="/about">Quem Somos</Link>
           <Link to="/"><Img fixed={data.file.childImageSharp.fixed} /></Link>
           <Link to="/portfolio">Serviços</Link>
           <Link to="/contact">Contato</Link>
         </nav>
-        
       </Wrapper>
-
     </Navbar>
-
   </header>
 }
 
