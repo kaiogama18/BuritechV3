@@ -23,6 +23,10 @@ export const Container = styled.div`
         margin-bottom: 8%;
     }
 
+`;
+
+
+export const Button = styled.div`
     a {
         color: white;
         padding: 1% 5%;
@@ -45,4 +49,3 @@ export const Container = styled.div`
         }
     }
 `;
-

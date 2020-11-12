@@ -1,10 +1,10 @@
-import React from 'react'
-import light from '../src/styles/themes/light'
+import React from 'react';
+import {Helmet} from 'react-helmet';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import light from '../src/styles/themes/light';
+import { Wrapper } from '../src/styles/styles';
 import { GlobalStyle } from '../src/styles/styles';
 import { Footer, Header } from '../src/components/index';
-import { Wrapper } from '../src/styles/styles';
-import {Helmet} from 'react-helmet';
-
 
 const { ThemeProvider } = require('styled-components');
 
