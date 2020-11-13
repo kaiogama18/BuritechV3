@@ -1,7 +1,8 @@
 import React from 'react';
-import Img from "gatsby-image"
-import { Container, NotFound, Button } from './styles'
-import { Link, graphql, useStaticQuery } from 'gatsby';
+import Img from "gatsby-image";
+import Button from '../components/button/index';
+import { graphql, useStaticQuery } from 'gatsby';
+import { Container, NotFound } from '../styles/styles';
 
 export default () => {
 
@@ -21,9 +22,7 @@ export default () => {
     <Img fixed={data.file.childImageSharp.fixed} />
     <Container>
       <h2>Não encontramos este endereço, mas você <br /> ainda pode navegar pelo nosso site?  </h2>
-      <Button>
-        <Link to="/">ir para home</Link>
-      </Button>
+      <Button text="ir para Home" link="/" />
     </Container>
   </NotFound>
 }

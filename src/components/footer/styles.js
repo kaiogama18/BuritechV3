@@ -20,10 +20,10 @@ export const Footer = styled.div`
     }
 
     @media screen and (max-width: 992px) {
-        // position: initial;
+        position: initial;
     }
 
     @media screen and (max-width: 600px) {
-        // position: initial;
+        position: initial;
     }
 `;

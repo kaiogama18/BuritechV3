@@ -2,7 +2,6 @@ import React from 'react';
 import {Helmet} from 'react-helmet';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import light from '../src/styles/themes/light';
-import { Wrapper } from '../src/styles/styles';
 import { GlobalStyle } from '../src/styles/styles';
 import { Footer, Header } from '../src/components/index';
 
@@ -16,9 +15,7 @@ export function wrapRootElement({ element }) {
             <title>Buritech | Soluções em Machine Learning</title>
         </Helmet>
         <Header />
-        <Wrapper>
             {element}
-        </Wrapper>
         <Footer />
     </ThemeProvider>
 }
