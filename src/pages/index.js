@@ -1,38 +1,34 @@
 import React from "react";
 import Img from "gatsby-image";
+import { graphql } from 'gatsby';
 import { Carousel } from "react-bootstrap";
 import Button from '../components/button/index';
-import { graphql, useStaticQuery } from 'gatsby';
 import { Container, Wrapper, Section, Title, Paragraph, Item } from '../styles/styles';
-import Banner from "../components/Banner";
+// import Banner from "../components/Banner";
 
-export default () => {
-
-  const data = useStaticQuery(graphql`
-    query Carousels {
-      file(relativePath: { eq: "banners.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 4000, quality: 100) {
-            ...GatsbyImageSharpFluid_tracedSVG
-          }
-        }
-      }
-    }
-  `)
+export default ({ data }) => {
+  const sources = [
+    data.mobileImage.childImageSharp.fluid,
+    {
+      ...data.desktopImage.childImageSharp.fluid,
+      media: `(min-width: 1440px)`,
+    },
+    {
+      ...data.normalImage.childImageSharp.fluid,
+      media: `(min-width: 768px)`,
+    },
+  ]
 
   return (
     <>
       <Carousel>
         <Carousel.Item>
-          <Img fluid={data.file.childImageSharp.fluid} />
+          <Img fluid={sources} alt={data.mobileImage.base.split(".")} />
           <Carousel.Caption>
             <Button text="Descubra" link="/" />
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
-
-
-
       <Wrapper>
         <Container>
           <Section>
@@ -46,7 +42,7 @@ export default () => {
               <Button text="Saiba Mais" link="/" />
             </Item>
             <Item>
-              <Banner/>
+              {/* <Banner fluid={data.file.childImageSharp.fluid} /> */}
             </Item>
           </Section>
         </Container>
@@ -56,4 +52,34 @@ export default () => {
   )
 }
 
-
+export const query = graphql`
+  query {
+    mobileImage: file(relativePath: { eq: "banner/banner-mobile.jpg" }) {
+      base
+      childImageSharp {
+        fluid(maxWidth: 1000, quality: 100) {
+          ...GatsbyImageSharpFluid_tracedSVG
+          ...GatsbyImageSharpFluidLimitPresentationSize
+        }
+      }
+    }
+    desktopImage: file(
+      relativePath: { eq: "banner/banner-ultrawide.jpg" }
+    ) {
+      base
+      childImageSharp {
+        fluid(maxWidth: 2000, quality: 100) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    normalImage: file(relativePath: { eq: "banner/banner-widescreen.jpg" }) {
+      base
+      childImageSharp {
+        fluid(maxWidth: 1000, quality: 100) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+  }
+`
