@@ -53,7 +53,7 @@ export default () => {
   return (
     <Carousel>
       <Carousel.Item>
-        <Img fluid={sources} alt={data.mobileImage.base.split(".")} />
+        <Img fluid={sources} alt="O que é a buritech?" />
         <Carousel.Caption>
           <Button text="Descubra" link="/" />
         </Carousel.Caption>

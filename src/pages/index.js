@@ -11,9 +11,8 @@ export default () => {
           <Section>
             <Item>
               <Title> Quem Somos  </Title>
-              <Paragraph>
-                Somos uma empresa regional especializada em <a>desenvolvimento de
-              software</a> e na realização de treinamentos técnicos em linguagens de
+              <Paragraph> Somos uma empresa regional especializada em <b>desenvolvimento de
+              software</b> e na realização de treinamentos técnicos em linguagens de
               programação, engenharia de softwares e áreas relacionadas.
             </Paragraph>
               <Button text="Saiba Mais" link="/" />
