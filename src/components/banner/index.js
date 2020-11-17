@@ -1,35 +1,64 @@
 import React from 'react';
+import { Button } from '..';
 import Img from "gatsby-image";
+import { Carousel } from 'react-bootstrap';
+import { graphql, useStaticQuery } from 'gatsby';
 
-export default ({fluid}) => {
-//   const {image} = useStaticQuery(graphql`
-//   query Banner {
-//     image(filter:{relativePath: {regex: "/Header\\/.+\\\\.yml/"}}) {
-//       childImageSharp {
-//         fluid(maxWidth: 4000, quality: 100) {
-//           ...GatsbyImageSharpFluid_tracedSVG
-//           }
-//         }
-//       }
-//     }
-//   `)
+export default () => {
 
+  const data = useStaticQuery(graphql`
+    query {
+      mobileImage: file(relativePath: { eq: "banner/banner-mobile.jpg" }) {
+        base
+        childImageSharp {
+          fluid(maxWidth: 1000, quality: 100) {
+            ...GatsbyImageSharpFluid_tracedSVG
+            ...GatsbyImageSharpFluidLimitPresentationSize
+          }
+        }
+      }
+      desktopImage: file(
+        relativePath: { eq: "banner/banner-ultrawide.jpg" }
+      ) {
+        base
+        childImageSharp {
+          fluid(maxWidth: 2000, quality: 100) {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
+      normalImage: file(relativePath: { eq: "banner/banner-widescreen.jpg" }) {
+        base
+        childImageSharp {
+          fluid(maxWidth: 1000, quality: 100) {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
+    }
+  `)
 
-//   return <Img fluid={image.file.childImageSharp.fluid} />
+  const sources = [
+    data.mobileImage.childImageSharp.fluid,
+    {
+      ...data.desktopImage.childImageSharp.fluid,
+      media: `(min-width: 1440px)`,
+    },
+    {
+      ...data.normalImage.childImageSharp.fluid,
+      media: `(min-width: 768px)`,
+    },
+  ]
 
-
-  // const data = useStaticQuery(graphql`
-  // query Banner {
-  //   file(relativePath: { eq: "team.jpg" }) {
-  //     childImageSharp {
-  //       fluid(maxWidth: 4000, quality: 100) {
-  //         ...GatsbyImageSharpFluid_tracedSVG
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
-
-  return <Img fluid={fluid} />
+  return (
+    <Carousel>
+      <Carousel.Item>
+        <Img fluid={sources} alt={data.mobileImage.base.split(".")} />
+        <Carousel.Caption>
+          <Button text="Descubra" link="/" />
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
+  )
 }
 
