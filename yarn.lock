@@ -14392,3 +14392,13 @@ yurnalist@^1.1.2:
     semver "^6.3.0"
     strip-ansi "^5.2.0"
     strip-bom "^4.0.0"
+
+"@hot-loader/react-dom":
+  version "0.0.0"
+  resolved "https://codeload.github.com/hot-loader/react-dom/tar.gz/d33208f02ebef963cdd3e91980b6d2a588588409"
+  dependencies:
+    fs-extra "^8.1.0"
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+    prop-types "^15.6.2"
+    semver "^6.2.0"

@@ -40,7 +40,8 @@
   },
   "devDependencies": {
     "cross-env": "^7.0.2",
-    "prettier": "2.1.2"
+    "prettier": "2.1.2",
+    "": "hot-loader/react-dom"
   },
   "repository": {
     "type": "git",
