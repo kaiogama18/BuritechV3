@@ -11,7 +11,6 @@ import styled from 'styled-components';
 export const GlobalStyle = createGlobalStyle`
     body {
         margin: 0;
-        font-size:  80%;
         font-family: Arial, sans-serif;
         color: ${props => props.theme.fontColor};
         background-color: ${props => props.theme.background};
@@ -43,6 +42,16 @@ export const Wrapper = styled.div`
 
     padding-right: 10px; /* 3 */
     padding-left:  10px; /* 3 */
+
+    .invisible-tablet-mobile {
+        display: inherit;
+    }
+
+    @media screen and (max-width: 992px) {
+        .invisible-tablet-mobile {
+            display: none;
+        }
+    }
 `;
 
 export const NotFound = styled.div`

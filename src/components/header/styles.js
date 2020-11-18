@@ -9,32 +9,29 @@ export const Contact = styled.div`
         width: 100%;
         color: white;
         display: flex;
-        font-size: 11px; 
+        font-size: 12px;
         margin-top: 1rem;
-        align-items: center;
         justify-content: space-between;
     }
 
     p {
         display: flex;
+        align-items: center;
         justify-content: center;
     }
 
     .material-icons {
         margin 0 3px;
-        font-size: 15px;
+        font-size: 18px;
         font-family: 'Material Icons';
     }
 
     b {
-        font-size: 12px;
         font-weight: bold;
         margin-right: 5px;
     }
 
-    @media screen and (max-width: 992px) {
-        font-size: 65%; 
-    }
+    @media screen and (max-width: 992px) {}
 
     @media screen and (max-width: 600px) {
         display: none;
