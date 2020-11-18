@@ -23,12 +23,12 @@ export default ({ data }) => {
               <Img fluid={data.image.childImageSharp.fluid} />
             </Item>
           </Section>
-          
-          {/* <Container>
+
+          <Container>
             <Section>
               <Title> Nossos Serviços  </Title>
             </Section>
-          </Container> */}
+          </Container>
 
         </Container>
       </Wrapper>

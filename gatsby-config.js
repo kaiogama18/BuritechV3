@@ -7,6 +7,16 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          'material icons',
+          'roboto:300,400,500,700',
+        ],
+        display: 'swap'
+      }
+    },
+    {
       resolve: `gatsby-plugin-nprogress`,
       options: {
         color: `tomato`,
