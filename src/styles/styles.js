@@ -78,12 +78,11 @@ export const NotFound = styled.div`
 
 export const Container = styled.div`
     background-color: #edf3f9;
-    padding-top: 1px;
+    padding: 2em 0;
 `;
 
 export const Section = styled.div`
     display: flex;
-    margin-top: 5%;
     flex-wrap: wrap;
 `;
 
@@ -92,6 +91,7 @@ export const Item = styled.div`
     align-self: center;
     .center{
         padding: 1%;
+        margin-top: 1em;
         text-align: center;
         .title {
             height: 3em;
