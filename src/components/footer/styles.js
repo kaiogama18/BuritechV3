@@ -6,7 +6,7 @@ export const Footer = styled.div`
     width: 100%;
     color: white;
     display: flex;
-    position: fixed;
+    // position: fixed;
     flex-wrap: wrap;
     text-align: center;
     background-color: ${props => props.theme.secondary};
@@ -19,11 +19,11 @@ export const Footer = styled.div`
         transition: all 0.3s ease 0s;
     }
 
-    @media screen and (max-width: 992px) {
-        position: initial;
-    }
+    // @media screen and (max-width: 992px) {
+    //     position: initial;
+    // }
 
-    @media screen and (max-width: 600px) {
-        position: initial;
-    }
+    // @media screen and (max-width: 600px) {
+    //     position: initial;
+    // }
 `;

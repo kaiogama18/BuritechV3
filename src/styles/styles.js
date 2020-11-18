@@ -76,22 +76,37 @@ export const NotFound = styled.div`
     }
 `;
 
-
-
-
 export const Container = styled.div`
-    margin: 5% auto;
+    background-color: #edf3f9;
+    padding-top: 1px;
 `;
 
 export const Section = styled.div`
     display: flex;
+    margin-top: 5%;
     flex-wrap: wrap;
 `;
 
 export const Item = styled.div`
     flex: 1;
-    margin: 0 0.5rem;
     align-self: center;
+    .center{
+        padding: 1%;
+        text-align: center;
+        .title {
+            height: 3em;
+            display: flex;
+            font-size: 1.2em;
+            font-weight: bold;
+            justify-content: center;
+        }
+    }
+
+    .material-icons {
+        font-size: 5em;
+        color: #e8b11c;
+        font-family: 'Material Icons';
+    }
 
     @media screen and (max-width: 600px) {
         flex: auto;

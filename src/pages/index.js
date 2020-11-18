@@ -9,29 +9,43 @@ export default ({ data }) => {
     <>
       <Banner />
       <Wrapper>
-        <Container>
-          <Section>
-            <Item>
-              <Title> Quem Somos  </Title>
-              <Paragraph> Somos uma empresa regional especializada em <b>desenvolvimento de
+        <Section>
+          <Item>
+            <Title> Quem Somos  </Title>
+            <Paragraph> Somos uma empresa regional especializada em <b>desenvolvimento de
               software</b> e na realização de treinamentos técnicos em linguagens de
               programação, engenharia de softwares e áreas relacionadas.
             </Paragraph>
-              <Button text="Saiba Mais" link="/" />
-            </Item>
-            <Item>
-              <Img fluid={data.image.childImageSharp.fluid} />
-            </Item>
-          </Section>
-
-          <Container>
-            <Section>
-              <Title> Nossos Serviços  </Title>
-            </Section>
-          </Container>
-
-        </Container>
+            <Button text="Saiba Mais" link="/" />
+          </Item>
+          <Item>
+            <Img fluid={data.image.childImageSharp.fluid} />
+          </Item>
+        </Section>
       </Wrapper>
+
+      <Container>
+        <Wrapper>
+          <Section>
+            <Title> Nossos Serviços </Title>
+          </Section>
+          <Section>
+            {Services.map((service) => (
+              <Item>
+                <div className="center">
+                  <div className="title">
+                    {service.title}
+                  </div>
+                  <span class="material-icons">{service.icon}</span>
+                  <Paragraph> {service.text} </Paragraph>
+                  <Button text="Saiba Mais" link={service.url} />
+                </div>
+              </Item>
+            ))}
+          </Section>
+        </Wrapper>
+      </Container>
+
     </>
   )
 }
@@ -50,3 +64,30 @@ export const query = graphql`
     }
   }
 `
+
+const Services = [
+  {
+    icon: 'devices',
+    title: 'Sites e Aplicativos',
+    text: 'Criamos sites e/ou aplicativos responsivos para o seu negócio digital.',
+    url: '/'
+  },
+  {
+    icon: 'forum',
+    title: 'Chatbots',
+    text: 'Facilite seu trabalho contratando um assistente que automatizará seu atendimento.',
+    url: '/'
+  },
+  {
+    icon: 'engineering',
+    title: 'Ciência de Dados',
+    text: 'Facilite seu trabalho contratando um cientista de dados.',
+    url: '/'
+  },
+  {
+    icon: 'psychology',
+    title: 'Treinamento em Machine Learning',
+    text: 'Domine o aprendizado de máquina com Python e torne-se um cientista de dados.',
+    url: '/'
+  },
+];
