@@ -2,19 +2,34 @@ import styled from 'styled-components';
 
 
 export const Contact = styled.div`
-    width: 100%;
-    color: white;
-    font-size: 85%; 
+    display: flex;
     background-color: ${props => props.theme.dark};
-
+    
     div {
+        width: 100%;
+        color: white;
         display: flex;
-        flex-wrap: wrap;
+        font-size: 11px; 
+        margin-top: 1rem;
+        align-items: center;
         justify-content: space-between;
+    }
 
-        p {
-            margin-top: 1rem;
-        }
+    p {
+        display: flex;
+        justify-content: center;
+    }
+
+    .material-icons {
+        margin 0 3px;
+        font-size: 15px;
+        font-family: 'Material Icons';
+    }
+
+    b {
+        font-size: 12px;
+        font-weight: bold;
+        margin-right: 5px;
     }
 
     @media screen and (max-width: 992px) {
