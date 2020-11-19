@@ -11,8 +11,9 @@ export default () => {
     query {
       file(relativePath: { eq: "logo_white.png" }) {
         childImageSharp {
-          fixed( width: 300, quality: 100 ) {
-            ...GatsbyImageSharpFixed_tracedSVG
+          fluid( maxWidth: 200, quality: 100) {
+            ...GatsbyImageSharpFluid_tracedSVG
+            ...GatsbyImageSharpFluidLimitPresentationSize
           }
         }
       }
@@ -24,12 +25,11 @@ export default () => {
             <Wrapper>
                 <Section>
                     <Item>
-                        <Img fixed={data.file.childImageSharp.fixed} />
+                        <Img fluid={data.file.childImageSharp.fluid} />
                         <Paragraph> {footer.buriText} </Paragraph>
                     </Item>
                     <Item>
                         <Section>
-
                             <Item>
                                 {footer.links.map((link) => (
                                     <div className="center">
@@ -37,7 +37,6 @@ export default () => {
                                     </div>
                                 ))}
                             </Item>
-
                             <Item>
                                 <p> Created by Kaio B. Gama - © BuriTech. Todos os direitos reservados </p>
                             </Item>

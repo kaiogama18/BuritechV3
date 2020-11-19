@@ -128,6 +128,10 @@ export const Title = styled.div`
     background-size: 100% 4px;
     background-repeat: no-repeat;
     background-position: bottom 0 left -50px;
+
+    b {
+        color: #00000000;
+    }
 `;
 
 export const Paragraph = styled.div`

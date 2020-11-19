@@ -12,7 +12,7 @@ export default ({ data }) => {
         <Section>
           <Item>
             <Section>
-              <Title> Quem Somos </Title>
+              <Title> <b>..</b>Quem Somos </Title>
             </Section>
             <Paragraph> Somos uma empresa regional especializada em <b>desenvolvimento de
               software</b> e na realização de treinamentos técnicos em linguagens de
@@ -29,7 +29,7 @@ export default ({ data }) => {
       <Container>
         <Wrapper>
           <Section>
-            <Title> Nossos Serviços </Title>
+            <Title> <b>..</b>Nossos Serviços </Title>
           </Section>
           <Section>
             {Services.map((service) => (
