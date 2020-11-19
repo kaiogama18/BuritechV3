@@ -26,11 +26,37 @@ export const GlobalStyle = createGlobalStyle`
         background-color: ${props => props.theme.secondary};
     }
 
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        height: 100px;
+        width: 100px;
+        outline: black;
+        background-size: 100%, 100%;
+        border-radius: 50%;
+        // border: 1px solid black;
+        background-image: none;
+    }
+
+    .carousel-control-next-icon:after{
+        content: '>';
+        font-size: 55px;
+        color: #e8b11c;
+    }
+
+    .carousel-control-prev-icon:after {
+        content: '<';
+        font-size: 55px;
+        color: #e8b11c;
+    }
+
+
     @media screen and (max-width: 600px) {
         h1, h2 {
             font-size: 95%;
         }
     }
+
+
 
 `;
 
