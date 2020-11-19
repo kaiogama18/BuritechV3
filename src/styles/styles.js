@@ -112,6 +112,25 @@ export const Container = styled.div`
 export const Section = styled.div`
     display: flex;
     flex-wrap: wrap;
+
+    .onlyMobile {
+        display: none;
+    }
+
+    .onlyDesktop {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    @media screen and (max-width: 600px) {
+        .onlyMobile {
+            display: inherit;
+        }
+
+        .onlyDesktop {
+            display: none;
+        }
+    }
 `;
 
 export const Item = styled.div`
@@ -171,5 +190,10 @@ export const Paragraph = styled.div`
     font-weight: normal;
     a { 
         font-weight: bold;
+    }
+
+    @media screen and (max-width: 600px) {
+        margin: 0 3%;
+        text-align: justify;
     }
 `;

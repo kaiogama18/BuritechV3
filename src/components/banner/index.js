@@ -51,7 +51,7 @@ export default () => {
   ]
 
   return (
-    <Carousel>
+    <Carousel indicators={false}>
       <Carousel.Item>
         <Img fluid={sources} alt="O que é a buritech?" />
         <Carousel.Caption>

@@ -3,6 +3,7 @@ import Img from "gatsby-image";
 import { graphql } from "gatsby";
 import { Button, Banner } from '../components/index';
 import { Container, Wrapper, Section, Title, Paragraph, Item } from '../styles/styles';
+import { Carousel } from "react-bootstrap";
 
 export default ({ data }) => {
   return (
@@ -31,18 +32,42 @@ export default ({ data }) => {
           <Section>
             <Title> <b>..</b>Nossos Serviços </Title>
           </Section>
+
           <Section>
-            {Services.map((service) => (
-              <Item key={service.icon}>
-                <div className="cards">
-                  <h5>{service.title}</h5>
-                  <span className="material-icons">{service.icon}</span>
-                  <Paragraph> {service.text} </Paragraph>
-                  <Button text="Saiba Mais" link={service.url} />
-                </div>
-              </Item>
-            ))}
+
+            <div className="onlyDesktop">
+              {Services.map((service) => (
+                <Item key={service.icon}>
+                  <div className="cards " >
+                    <h5>{service.title}</h5>
+                    <span className="material-icons">{service.icon}</span>
+                    {service.text}
+                    <Button text="Saiba Mais" link={service.url} />
+                  </div>
+                </Item>
+              ))}
+            </div>
+
+
+            <Carousel className="onlyMobile" indicators={false}>
+              {Services.map((service) => (
+                <Carousel.Item key={service.icon}>
+                  <Item>
+                    <div className="cards">
+                      <h5>{service.title}</h5>
+                      <span className="material-icons">{service.icon}</span>
+                      {service.text}
+                      <Button text="Saiba Mais" link={service.url} />
+                    </div>
+                  </Item>
+                </Carousel.Item>
+              ))}
+            </Carousel>
+
           </Section>
+
+
+
         </Wrapper>
       </Container>
 
