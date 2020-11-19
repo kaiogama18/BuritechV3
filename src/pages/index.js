@@ -33,10 +33,10 @@ export default ({ data }) => {
           </Section>
           <Section>
             {Services.map((service) => (
-              <Item>
+              <Item key={service.icon}>
                 <div className="cards">
                   <h5>{service.title}</h5>
-                  <span class="material-icons">{service.icon}</span>
+                  <span className="material-icons">{service.icon}</span>
                   <Paragraph> {service.text} </Paragraph>
                   <Button text="Saiba Mais" link={service.url} />
                 </div>

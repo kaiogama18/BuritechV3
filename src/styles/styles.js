@@ -117,6 +117,10 @@ export const Item = styled.div`
     @media screen and (max-width: 600px) {
         flex: auto;
     }
+
+    hr {
+        border-top: 1px solid white;
+    }
 `;
 
 export const Title = styled.div`

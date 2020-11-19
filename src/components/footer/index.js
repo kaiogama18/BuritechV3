@@ -11,9 +11,8 @@ export default () => {
     query {
       file(relativePath: { eq: "logo_white.png" }) {
         childImageSharp {
-          fluid( maxWidth: 200, quality: 100) {
-            ...GatsbyImageSharpFluid_tracedSVG
-            ...GatsbyImageSharpFluidLimitPresentationSize
+          fixed(width: 200, quality: 100) {
+            ...GatsbyImageSharpFixed_tracedSVG
           }
         }
       }
@@ -25,23 +24,29 @@ export default () => {
             <Wrapper>
                 <Section>
                     <Item>
-                        <Img fluid={data.file.childImageSharp.fluid} />
-                        <Paragraph> {footer.buriText} </Paragraph>
+                        <div className="cards">
+                            <Img fixed={data.file.childImageSharp.fixed} />
+                            <Paragraph className="link"> {footer.buriText} </Paragraph>
+                        </div>
                     </Item>
                     <Item>
                         <Section>
                             <Item>
                                 {footer.links.map((link) => (
-                                    <div className="center">
+                                    <div key={link.title} className="center">
                                         <Link className="link" to={link.url}>{link.title}</Link>
                                     </div>
                                 ))}
                             </Item>
                             <Item>
-                                <p> Created by Kaio B. Gama - © BuriTech. Todos os direitos reservados </p>
+                                {footer.socials.map((social) => (
+                                    <p key={social.icon}><span className="material-icons">{social.icon}</span>{social.description}</p>
+                                ))}
+                                <hr />
+                                {footer.contacts.map((contact) => (
+                                    <p key={contact.icon} ><span className="material-icons">{contact.icon}</span><b>{contact.title}</b> {contact.description} </p>
+                                ))}
                             </Item>
-
-
                         </Section>
                     </Item>
                 </Section>
@@ -52,7 +57,7 @@ export default () => {
 
 
 const footer = {
-    buriText: ' A Buritech é uma empresa tecnológica da cidade de Manaus que oferece soluções em projetos de software, consultoria e treinamentos voltados à Ciência de Dados, desenvolvimento e aplicações Web e Mobile.',
+    buriText: ' A Buritech é uma empresa da cidade de Manaus que oferece soluções de software, consultoria e treinamentos, desenvolvimento e aplicações Web e Mobile.',
     links: [
         {
             title: 'Quem Somos',
@@ -69,6 +74,29 @@ const footer = {
         {
             title: 'Contato',
             url: '/contact'
+        },
+    ],
+    socials: [
+        {
+            description: '@buritech',
+            icon: 'facebook'
+        },
+    ],
+    contacts: [
+        {
+            title: 'Telefone:',
+            description: '(92) 99189-1906',
+            icon: 'call'
+        },
+        {
+            title: 'Email:',
+            description: 'contato@buritech.com.br',
+            icon: 'email'
+        },
+        {
+            title: 'Endereço:',
+            description: 'UFAM - Coroado, Manaus - AM',
+            icon: 'location_on'
         },
     ]
 };

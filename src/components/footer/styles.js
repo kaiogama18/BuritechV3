@@ -6,31 +6,59 @@ export const Footer = styled.div`
     width: 100%;
     color: white;
     display: flex;
-    // position: fixed;
-    // margin-top: 2em;
+    padding-top: 1%;
     flex-wrap: wrap;
     text-align: center;
     background-color: ${props => props.theme.secondary};
 
     p{
-        font-weight: 500;
+        display: flex;
+        align-items: center;
+        margin-left: 1%;
+    }
+
+    .center {
+        margin: 11% 0px;
+    }
+
+    .cards{
+        display: contents;
+        text-align: center;
+    }
+
+    .link{
+        color: white;
+        font-size: 1.1em;
+        text-align: center;
+    }
+
+    .material-icons {
+        color: white;
+        font-size: 1.5em;
+        margin-right: 2%;
+    }
+
+    a {
+        color: white;
+        font-weight: bold;
         text-decoration: none;
         font-family: system-ui;
         text-transform: uppercase;
         transition: all 0.3s ease 0s;
     }
-
-    .link{
-        font-size: 1.1em;
-        color: white;
-        font-weight: bold;
+    a:hover {
+        color: ${props => props.theme.neutral};
     }
 
-    // @media screen and (max-width: 992px) {
-    //     position: initial;
-    // }
+    b {
+        font-weight: bold;
+        margin-right: 5px;
+    }
 
-    // @media screen and (max-width: 600px) {
-    //     position: initial;
-    // }
+
+    @media screen and (max-width: 600px) {
+        .link{
+            display: none;
+        }
+    }
 `;
