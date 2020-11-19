@@ -11,7 +11,7 @@ export default ({ data }) => {
       <Wrapper>
         <Section>
           <Item>
-            <Title> Quem Somos  </Title>
+            <Title> Quem Somos </Title>
             <Paragraph> Somos uma empresa regional especializada em <b>desenvolvimento de
               software</b> e na realização de treinamentos técnicos em linguagens de
               programação, engenharia de softwares e áreas relacionadas.
@@ -75,7 +75,7 @@ const Services = [
   {
     icon: 'forum',
     title: 'Chatbots',
-    text: 'Facilite seu trabalho contratando um assistente que automatizará seu atendimento.',
+    text: 'Facilite seu trabalho com um assistente que automatizará seu trabalho.',
     url: '/'
   },
   {

@@ -11,6 +11,7 @@ import styled from 'styled-components';
 export const GlobalStyle = createGlobalStyle`
     body {
         margin: 0;
+        font-family: cursive;
         font-family: Arial, sans-serif;
         color: ${props => props.theme.fontColor};
         background-color: ${props => props.theme.background};
@@ -88,9 +89,11 @@ export const Section = styled.div`
 
 export const Item = styled.div`
     flex: 1;
+    padding: 1%;
     align-self: center;
     .center{
-        padding: 1%;
+        display: flex;
+        flex-direction: column;
         margin-top: 1em;
         text-align: center;
         .title {
@@ -99,6 +102,11 @@ export const Item = styled.div`
             font-size: 1.2em;
             font-weight: bold;
             justify-content: center;
+        }
+        .link{
+            font-size: 1.1em;
+            color: white;
+            font-weight: bold;
         }
     }
 
@@ -116,7 +124,32 @@ export const Item = styled.div`
 export const Title = styled.div`
     font-size: 1.5rem;
     font-weight: bold;
+    display: inline;
+    background: linear-gradient(90deg, rgba(254,86,61,1) 35%, rgba(233,175,29,1) 100%); 
+    background-size: 100% 4px;
+    background-position: bottom 0 left -50px;
+    background-repeat: no-repeat;
 `;
+
+
+// export const Title = styled.div`
+//     font-size: 1.5rem;
+//     font-weight: bold;
+//     display: inline;
+//     background: orange;
+//     box-shadow: 10px 0 0 orange, -30px 0 0 orange;
+// `;
+
+
+// export const Title = styled.div`
+//     font-size: 1.5rem;
+//     font-weight: bold;
+//     width: 9em;
+    // background: linear-gradient(to left,  red, blue), linear-gradient(to left,  red, blue); 
+    // background-size: 100% 1px;
+    // background-position: bottom 0 left 0, bottom 5px left 0;
+    // background-repeat:no-repeat;
+// `;
 
 export const Paragraph = styled.div`
     font-size: 1em;

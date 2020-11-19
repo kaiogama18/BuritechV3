@@ -11,7 +11,7 @@ export default () => {
       file(relativePath: { eq: "logo_white.png" }) {
         childImageSharp {
           fixed(width: 104) {
-            ...GatsbyImageSharpFixed
+            ...GatsbyImageSharpFixed_tracedSVG
           }
         }
       }

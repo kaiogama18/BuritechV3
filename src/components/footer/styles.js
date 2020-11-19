@@ -7,7 +7,7 @@ export const Footer = styled.div`
     color: white;
     display: flex;
     // position: fixed;
-    margin-top: 2em;
+    // margin-top: 2em;
     flex-wrap: wrap;
     text-align: center;
     background-color: ${props => props.theme.secondary};
