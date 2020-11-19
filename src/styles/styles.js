@@ -11,6 +11,7 @@ import styled from 'styled-components';
 export const GlobalStyle = createGlobalStyle`
     body {
         margin: 0;
+        text-align: justify;
         font-family: cursive;
         font-family: Arial, sans-serif;
         color: ${props => props.theme.fontColor};
@@ -91,28 +92,25 @@ export const Item = styled.div`
     flex: 1;
     padding: 1%;
     align-self: center;
-    .center{
+
+    .cards{
         display: flex;
-        flex-direction: column;
-        margin-top: 1em;
         text-align: center;
-        .title {
+        flex-direction: column;
+
+        h5 {
             height: 3em;
             display: flex;
-            font-size: 1.2em;
             font-weight: bold;
+            align-items: center;
             justify-content: center;
-        }
-        .link{
-            font-size: 1.1em;
-            color: white;
-            font-weight: bold;
         }
     }
 
     .material-icons {
-        font-size: 5em;
+        margin: 3% 0;
         color: #e8b11c;
+        font-size: 5em;
         font-family: 'Material Icons';
     }
 
@@ -122,37 +120,20 @@ export const Item = styled.div`
 `;
 
 export const Title = styled.div`
+    margin: 1% 0;
+    display: inline;
     font-size: 1.5rem;
     font-weight: bold;
-    display: inline;
     background: linear-gradient(90deg, rgba(254,86,61,1) 35%, rgba(233,175,29,1) 100%); 
     background-size: 100% 4px;
-    background-position: bottom 0 left -50px;
     background-repeat: no-repeat;
+    background-position: bottom 0 left -50px;
 `;
 
-
-// export const Title = styled.div`
-//     font-size: 1.5rem;
-//     font-weight: bold;
-//     display: inline;
-//     background: orange;
-//     box-shadow: 10px 0 0 orange, -30px 0 0 orange;
-// `;
-
-
-// export const Title = styled.div`
-//     font-size: 1.5rem;
-//     font-weight: bold;
-//     width: 9em;
-    // background: linear-gradient(to left,  red, blue), linear-gradient(to left,  red, blue); 
-    // background-size: 100% 1px;
-    // background-position: bottom 0 left 0, bottom 5px left 0;
-    // background-repeat:no-repeat;
-// `;
-
 export const Paragraph = styled.div`
+    margin: 1% 0;
     font-size: 1em;
+    text-align: initial;
     font-weight: normal;
     a { 
         font-weight: bold;

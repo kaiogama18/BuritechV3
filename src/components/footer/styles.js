@@ -20,6 +20,12 @@ export const Footer = styled.div`
         transition: all 0.3s ease 0s;
     }
 
+    .link{
+        font-size: 1.1em;
+        color: white;
+        font-weight: bold;
+    }
+
     // @media screen and (max-width: 992px) {
     //     position: initial;
     // }

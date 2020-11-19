@@ -11,7 +11,9 @@ export default ({ data }) => {
       <Wrapper>
         <Section>
           <Item>
-            <Title> Quem Somos </Title>
+            <Section>
+              <Title> Quem Somos </Title>
+            </Section>
             <Paragraph> Somos uma empresa regional especializada em <b>desenvolvimento de
               software</b> e na realização de treinamentos técnicos em linguagens de
               programação, engenharia de softwares e áreas relacionadas.
@@ -32,10 +34,8 @@ export default ({ data }) => {
           <Section>
             {Services.map((service) => (
               <Item>
-                <div className="center">
-                  <div className="title">
-                    {service.title}
-                  </div>
+                <div className="cards">
+                  <h5>{service.title}</h5>
                   <span class="material-icons">{service.icon}</span>
                   <Paragraph> {service.text} </Paragraph>
                   <Button text="Saiba Mais" link={service.url} />
