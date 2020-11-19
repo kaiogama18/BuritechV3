@@ -31,10 +31,10 @@ export default () => {
                     </Item>
                     <Item>
                         <Section>
-                            <Item>
+                            <Item className="link">
                                 {footer.links.map((link) => (
                                     <div key={link.title} className="center">
-                                        <Link className="link" to={link.url}>{link.title}</Link>
+                                        <Link to={link.url}>{link.title}</Link>
                                     </div>
                                 ))}
                             </Item>

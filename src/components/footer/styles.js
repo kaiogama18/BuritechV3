@@ -56,9 +56,14 @@ export const Footer = styled.div`
     }
 
 
-    @media screen and (max-width: 600px) {
+
+
+    @media screen and (max-width: 992px) {
         .link{
             display: none;
         }
     }
+
+    @media screen and (max-width: 600px) {}
+
 `;
