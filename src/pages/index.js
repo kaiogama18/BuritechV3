@@ -1,8 +1,8 @@
 import React from "react";
 import Img from "gatsby-image";
 import { graphql } from "gatsby";
-import { Button, Banner } from '../components/index';
-import { Container, Wrapper, Section, Title, Paragraph, Item } from '../styles/styles';
+import { Button, Banner, Container } from '../components/index';
+import { Wrapper, Section, Title, Paragraph, Item } from '../styles/styles';
 import { Carousel } from "react-bootstrap";
 
 export default ({ data }) => {
@@ -27,48 +27,42 @@ export default ({ data }) => {
         </Section>
       </Wrapper>
 
-      <Container>
-        <Wrapper>
-          <Section>
-            <Title> <b>..</b>Nossos Serviços </Title>
-          </Section>
 
-          <Section>
 
-            <div className="onlyDesktop">
-              {Services.map((service) => (
-                <Item key={service.icon}>
-                  <div className="cards " >
+
+      <Container backgroundColor={'#edf3f9'} >
+
+        <Section>
+          <Title> <b>..</b>Nossos Serviços </Title>
+        </Section>
+        <Section>
+          <div className="onlyDesktop">
+            {Services.map((service) => (
+              <Item key={service.icon}>
+                <div className="cards " >
+                  <h5>{service.title}</h5>
+                  <span className="material-icons">{service.icon}</span>
+                  {service.text}
+                  <Button text="Saiba Mais" link={service.url} />
+                </div>
+              </Item>
+            ))}
+          </div>
+          <Carousel className="onlyMobile" indicators={false}>
+            {Services.map((service) => (
+              <Carousel.Item key={service.icon}>
+                <Item>
+                  <div className="cards">
                     <h5>{service.title}</h5>
                     <span className="material-icons">{service.icon}</span>
                     {service.text}
                     <Button text="Saiba Mais" link={service.url} />
                   </div>
                 </Item>
-              ))}
-            </div>
-
-
-            <Carousel className="onlyMobile" indicators={false}>
-              {Services.map((service) => (
-                <Carousel.Item key={service.icon}>
-                  <Item>
-                    <div className="cards">
-                      <h5>{service.title}</h5>
-                      <span className="material-icons">{service.icon}</span>
-                      {service.text}
-                      <Button text="Saiba Mais" link={service.url} />
-                    </div>
-                  </Item>
-                </Carousel.Item>
-              ))}
-            </Carousel>
-
-          </Section>
-
-
-
-        </Wrapper>
+              </Carousel.Item>
+            ))}
+          </Carousel>
+        </Section>
       </Container>
 
     </>
@@ -112,7 +106,7 @@ const Services = [
   {
     icon: 'psychology',
     title: 'Treinamento em Machine Learning',
-    text: 'Domine o aprendizado de máquina com Python e torne-se um cientista de dados.',
+    text: 'Domine o aprendizado de máquina com Python e torne-se um cientista.',
     url: '/'
   },
 ];

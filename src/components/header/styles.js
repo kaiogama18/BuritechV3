@@ -7,7 +7,6 @@ export const Contact = styled.div`
     
     div {
         width: 100%;
-        color: white;
         display: flex;
         font-size: 12px;
         margin-top: 1rem;
@@ -41,11 +40,10 @@ export const Contact = styled.div`
 
 export const Navbar = styled.div`
     width: 100%;
+    color: white;
     background-color: ${props => props.theme.secondary};
-    
     nav {
         display: flex;
-        padding: 0 2%;
         flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
@@ -56,7 +54,6 @@ export const Navbar = styled.div`
 
         a {
             color: white;
-            font-weight: 500;
             text-decoration: none;
             font-family: system-ui;
             text-transform: uppercase;

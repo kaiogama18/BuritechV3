@@ -1,29 +1,31 @@
 import React from 'react';
 import Img from "gatsby-image";
+import { Container } from '../components';
 import Button from '../components/button/index';
 import { graphql, useStaticQuery } from 'gatsby';
-import { Container, NotFound } from '../styles/styles';
 
 export default () => {
 
   const data = useStaticQuery(graphql`
-    query notFound {
-      file(relativePath: { eq: "404.png" }) {
+    query {
+      image: file(relativePath: { eq: "404.png" }) {
+        base
         childImageSharp {
-          fixed(width: 700) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 700, quality: 100) {
+            ...GatsbyImageSharpFluid_tracedSVG
+            ...GatsbyImageSharpFluidLimitPresentationSize
           }
         }
       }
     }
   `)
 
-  return <NotFound>
-    <Img fixed={data.file.childImageSharp.fixed} />
+  return (
     <Container>
-      <h2>Não encontramos este endereço, mas você <br /> ainda pode navegar pelo nosso site?  </h2>
+      <Img fluid={data.image.childImageSharp.fluid}/>
+      <h4> Não encontramos este endereço, mas você <br /> ainda pode navegar pelo nosso site? </h4>
       <Button text="ir para Home" link="/" />
     </Container>
-  </NotFound>
+  )
 }
 

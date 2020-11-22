@@ -1,5 +1,5 @@
 import React from 'react';
-import {Helmet} from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import light from '../src/styles/themes/light';
 import { GlobalStyle } from '../src/styles/styles';
@@ -7,7 +7,7 @@ import { Footer, Header } from '../src/components/index';
 
 const { ThemeProvider } = require('styled-components');
 
-export function wrapRootElement({ element }) {
+export function wrapRootElement({ element, children, location }) {
     return <ThemeProvider theme={light}  >
         <GlobalStyle />
         <Helmet>
@@ -15,7 +15,9 @@ export function wrapRootElement({ element }) {
             <title>Buritech | Soluções em Machine Learning</title>
         </Helmet>
         <Header />
-            {element}
+
+        {element}
+
         <Footer />
     </ThemeProvider>
 }
