@@ -1,8 +1,7 @@
 import React from 'react';
 import Img from "gatsby-image"
-import { Footer } from './styles'
-import { graphql, useStaticQuery } from 'gatsby';
-// import { Wrapper, Section, Item, Paragraph } from '../../styles/styles'
+import { Container, Content, Item, Title } from '..';
+import { graphql, Link, useStaticQuery } from 'gatsby';
 
 
 export default () => {
@@ -20,38 +19,28 @@ export default () => {
     `)
 
     return (
-        <Footer>
-            {/* <Wrapper>
-                <Section>
-                    <Item>
-                        <div className="cards">
-                            <Img fixed={data.file.childImageSharp.fixed} />
-                            <Paragraph className="link"> {footer.buriText} </Paragraph>
-                        </div>
-                    </Item>
-                    <Item>
-                        <Section>
-                            <Item className="link">
-                                {footer.links.map((link) => (
-                                    <div key={link.title} className="center">
-                                        <Link to={link.url}>{link.title}</Link>
-                                    </div>
-                                ))}
-                            </Item>
-                            <Item>
-                                {footer.socials.map((social) => (
-                                    <p key={social.icon}><span className="material-icons">{social.icon}</span>{social.description}</p>
-                                ))}
-                                <hr />
-                                {footer.contacts.map((contact) => (
-                                    <p key={contact.icon} ><span className="material-icons">{contact.icon}</span><b>{contact.title}</b> {contact.description} </p>
-                                ))}
-                            </Item>
-                        </Section>
-                    </Item>
-                </Section>
-            </Wrapper> */}
-        </Footer>
+        <footer>
+            <Container backgroundColor={'#525659'} color={'#fff'} vertical>
+                <Item flex>
+                    <Img fixed={data.file.childImageSharp.fixed} />
+                    <Content className="link"> {footer.buriText} </Content>
+                </Item>
+                <Item flex only={'desktop'}>
+                    {footer.links.map((link) => <Title link normal url={link.url} vertical>  {link.title} </Title>)}
+                </Item>
+                <Item flex>
+                    {footer.socials.map((social) => (
+                        <p key={social.icon}><span className="material-icons">{social.icon}</span>{social.description}</p>
+                    ))}
+                    <hr />
+                    {footer.contacts.map((contact) => (
+                        <p key={contact.icon} ><span className="material-icons">{contact.icon}</span><b>{contact.title}</b> {contact.description} </p>
+                    ))}
+                </Item>
+
+            </Container>
+        </footer>
+
     )
 }
 
@@ -69,7 +58,7 @@ const footer = {
         },
         {
             title: 'Metodologia',
-            url: '/'
+            url: '/404'
         },
         {
             title: 'Contato',
@@ -100,3 +89,4 @@ const footer = {
         },
     ]
 };
+

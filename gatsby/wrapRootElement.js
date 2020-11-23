@@ -18,6 +18,6 @@ export function wrapRootElement({ element }) {
 
         {element}
 
-        {/* <Footer /> */}
+        <Footer />
     </ThemeProvider>
 }

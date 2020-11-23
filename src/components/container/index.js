@@ -5,6 +5,7 @@ export default function (props) {
     return (
         <Container
             backgroundColor={props.backgroundColor}
+            color={props.color}
             padding={props.vertical}>
             <Wrapper>
                 {props.children}

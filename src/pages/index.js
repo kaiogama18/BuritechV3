@@ -2,8 +2,7 @@ import React from "react";
 import Img from "gatsby-image";
 import { graphql } from "gatsby";
 import { Carousel } from "react-bootstrap";
-import { Paragraph } from '../styles/styles';
-import { Button, Banner, Container, Title, Item, Card } from '../components/index';
+import { Button, Banner, Container, Title, Item, Card, Content } from '../components/index';
 
 
 function About({ about, img }) {
@@ -11,7 +10,7 @@ function About({ about, img }) {
     <Container>
       <Item flex>
         <Title>  {about.title} </Title>
-        <Paragraph> {about.content}  </Paragraph>
+        <Content> {about.content}  </Content>
         <Button text="Saiba Mais" link="/" />
       </Item>
       <Item flex>

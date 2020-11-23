@@ -12,6 +12,10 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     }
 
+    hr {
+        border-top: 1px solid #ffffff;
+    }
+
     .carousel-control-prev-icon,
     .carousel-control-next-icon {
         height: 100px;
@@ -69,20 +73,20 @@ export const Wrapper = styled.div`
 
 
 
-export const Paragraph = styled.div`
-    margin: 1% 0;
-    font-size: 1em;
-    font-weight: normal;
-    text-align: ${props => props.align}
-    a { 
-        font-weight: bold;
-    }
+// export const Paragraph = styled.div`
+//     margin: 1% 0;
+//     font-size: 1em;
+//     font-weight: normal;
+//     text-align: ${props => props.align}
+//     a { 
+//         font-weight: bold;
+//     }
 
-    @media screen and (max-width: 600px) {
-        margin: 0 3%;
-        text-align: justify;
-    }
-`;
+//     @media screen and (max-width: 600px) {
+//         margin: 0 3%;
+//         text-align: justify;
+//     }
+// `;
 
     // footer {
     //     background-color: ${props => props.theme.secondary};
