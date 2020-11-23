@@ -22,8 +22,8 @@ export default () => {
 
   return (
     <Container>
-      <Img fluid={data.image.childImageSharp.fluid}/>
-      <h4> Não encontramos este endereço, mas você <br /> ainda pode navegar pelo nosso site? </h4>
+      <Img fluid={data.image.childImageSharp.fluid} />
+        Não encontramos este endereço, mas você <br /> ainda pode navegar pelo nosso site?
       <Button text="ir para Home" link="/" />
     </Container>
   )

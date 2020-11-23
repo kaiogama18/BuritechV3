@@ -30,11 +30,11 @@ export default () => {
   `)
 
   const ListLink = props => (
-    props.img == 'true' ? (
+    props.img === 'true' ? (
       <Link to="/" > <Img fixed={data.file.childImageSharp.fixed} alt={props.children} /></Link>
     )
       : (
-        <Link to={props.to} className={props.mobile == 'true' ? 'hidden' : null} >{props.children}</Link>
+        <Link to={props.to} className={props.mobile === 'true' ? 'hidden' : null} >{props.children}</Link>
       )
   )
 
@@ -44,7 +44,7 @@ export default () => {
       <Wrapper>
         <nav>
           {links.link.map((aux) => (
-            <ListLink mobile={aux.hidden} img={aux.img} to="/">{aux.title}</ListLink>
+            <ListLink key={aux.title} mobile={aux.hidden} img={aux.img} to="/">{aux.title}</ListLink>
           ))}
         </nav>
       </Wrapper>

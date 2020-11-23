@@ -154,8 +154,8 @@ export const Title = styled.div`
 export const Paragraph = styled.div`
     margin: 1% 0;
     font-size: 1em;
-    text-align: initial;
     font-weight: normal;
+    text-align: ${props => props.align}
     a { 
         font-weight: bold;
     }
