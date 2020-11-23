@@ -1,12 +1,14 @@
 import React from 'react';
-import { Container } from './styles'
+import { Container, Wrapper } from './styles'
 
 export default function (props) {
     return (
-        <Container backgroundColor={props.backgroundColor ? props.backgroundColor : null}>
-            <div className="wrapper">
+        <Container
+            backgroundColor={props.backgroundColor}
+            padding={props.vertical}>
+            <Wrapper>
                 {props.children}
-            </div>
+            </Wrapper>
         </Container>
     )
 }

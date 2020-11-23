@@ -1,8 +1,8 @@
 import React from 'react';
 import Img from "gatsby-image"
 import { Footer } from './styles'
-import { graphql, Link, useStaticQuery } from 'gatsby';
-import { Wrapper, Section, Item, Paragraph } from '../../styles/styles'
+import { graphql, useStaticQuery } from 'gatsby';
+// import { Wrapper, Section, Item, Paragraph } from '../../styles/styles'
 
 
 export default () => {
@@ -21,7 +21,7 @@ export default () => {
 
     return (
         <Footer>
-            <Wrapper>
+            {/* <Wrapper>
                 <Section>
                     <Item>
                         <div className="cards">
@@ -50,7 +50,7 @@ export default () => {
                         </Section>
                     </Item>
                 </Section>
-            </Wrapper>
+            </Wrapper> */}
         </Footer>
     )
 }

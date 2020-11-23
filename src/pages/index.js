@@ -1,70 +1,66 @@
 import React from "react";
 import Img from "gatsby-image";
 import { graphql } from "gatsby";
-import { Button, Banner, Container } from '../components/index';
-import { Wrapper, Section, Title, Paragraph, Item } from '../styles/styles';
+import { Paragraph } from '../styles/styles';
+import { Button, Banner, Container, Title, Item } from '../components/index';
 import { Carousel } from "react-bootstrap";
+
+function About({ about, img }) {
+  return (
+    <Container>
+      <Item flex>
+        <Title>  {about.title} </Title>
+        <Paragraph> {about.content}  </Paragraph>
+        <Button text="Saiba Mais" link="/" />
+      </Item>
+      <Item flex>
+        <Img fluid={img} />
+      </Item>
+    </Container>
+  );
+}
+
+function Service({ services }) {
+  return (
+    <Container backgroundColor={'#edf3f9'} vertical>
+      <Title>  {services.title} </Title>
+
+      <Item only={'desktop'}>
+        {services.cards.map((card) => (
+          <div key={card.title} className="card" >
+            <Title normal>  {card.title} </Title>
+            <span className="material-icons">{card.icon}</span>
+            {card.text}
+            <Button text="Saiba Mais" link={card.url} />
+          </div>
+        ))}
+      </Item>
+
+      <Item only={'mobile'}>
+        <Carousel indicators={false}>
+          {services.cards.map((card) => (
+            <Carousel.Item key={card.icon}>
+              <div key={card.title} className="card" >
+                <Title normal>  {card.title} </Title>
+                <span className="material-icons">{card.icon}</span>
+                {card.text}
+                <Button text="Saiba Mais" link={card.url} />
+              </div>
+            </Carousel.Item>
+          ))}
+        </Carousel>
+      </Item>
+
+    </Container>
+  );
+}
 
 export default ({ data }) => {
   return (
     <>
       <Banner />
-      <Wrapper>
-        <Section>
-          <Item>
-            <Section>
-              <Title> <b>..</b>Quem Somos </Title>
-            </Section>
-            <Paragraph> Somos uma empresa regional especializada em <b>desenvolvimento de
-              software</b> e na realização de treinamentos técnicos em linguagens de
-              programação, engenharia de softwares e áreas relacionadas.
-            </Paragraph>
-            <Button text="Saiba Mais" link="/" />
-          </Item>
-          <Item>
-            <Img fluid={data.image.childImageSharp.fluid} />
-          </Item>
-        </Section>
-      </Wrapper>
-
-
-
-
-      <Container backgroundColor={'#edf3f9'} >
-
-        <Section>
-          <Title> <b>..</b>Nossos Serviços </Title>
-        </Section>
-        <Section>
-          <div className="onlyDesktop">
-            {Services.map((service) => (
-              <Item key={service.icon}>
-                <div className="cards " >
-                  <h5>{service.title}</h5>
-                  <span className="material-icons">{service.icon}</span>
-                  {service.text}
-                  <Button text="Saiba Mais" link={service.url} />
-                </div>
-              </Item>
-            ))}
-          </div>
-          <Carousel className="onlyMobile" indicators={false}>
-            {Services.map((service) => (
-              <Carousel.Item key={service.icon}>
-                <Item>
-                  <div className="cards">
-                    <h5>{service.title}</h5>
-                    <span className="material-icons">{service.icon}</span>
-                    {service.text}
-                    <Button text="Saiba Mais" link={service.url} />
-                  </div>
-                </Item>
-              </Carousel.Item>
-            ))}
-          </Carousel>
-        </Section>
-      </Container>
-
+      <About about={Home.about} img={data.image.childImageSharp.fluid} />
+      <Service services={Home.services} />
     </>
   )
 }
@@ -84,29 +80,39 @@ export const query = graphql`
   }
 `
 
-const Services = [
-  {
-    icon: 'devices',
-    title: 'Sites e Aplicativos',
-    text: 'Criamos sites e/ou aplicativos responsivos para o seu negócio digital.',
-    url: '/'
+const Home = {
+  about: {
+    title: 'Quem Somos',
+    content: 'Somos uma empresa regional especializada em <b>desenvolvimento de software</b> e na realização de treinamentos técnicos em linguagens de   programação, engenharia de softwares e áreas relacionadas.'
   },
-  {
-    icon: 'forum',
-    title: 'Chatbots',
-    text: 'Facilite seu trabalho com um assistente que automatizará seu trabalho.',
-    url: '/'
-  },
-  {
-    icon: 'engineering',
-    title: 'Ciência de Dados',
-    text: 'Facilite seu trabalho contratando um cientista de dados.',
-    url: '/'
-  },
-  {
-    icon: 'psychology',
-    title: 'Treinamento em Machine Learning',
-    text: 'Domine o aprendizado de máquina com Python e torne-se um cientista.',
-    url: '/'
-  },
-];
+  services: {
+    title: 'Nossos Serviços',
+    cards: [
+      {
+        icon: 'devices',
+        title: 'Sites e Aplicativos',
+        text: 'Criamos sites e/ou aplicativos responsivos para o seu negócio digital.',
+        url: '/'
+      },
+      {
+        icon: 'forum',
+        title: 'Chatbots',
+        text: 'Facilite seu trabalho com um assistente que automatizará seu trabalho.',
+        url: '/'
+      },
+      {
+        icon: 'engineering',
+        title: 'Ciência de Dados',
+        text: 'Facilite seu trabalho contratando um cientista de dados.',
+        url: '/'
+      },
+      {
+        icon: 'psychology',
+        title: 'Treinamento em Machine Learning',
+        text: 'Domine o aprendizado de máquina com Python e torne-se um cientista.',
+        url: '/'
+      },
+    ]
+  }
+
+}

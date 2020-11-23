@@ -7,7 +7,7 @@ import { Footer, Header } from '../src/components/index';
 
 const { ThemeProvider } = require('styled-components');
 
-export function wrapRootElement({ element, children, location }) {
+export function wrapRootElement({ element }) {
     return <ThemeProvider theme={light}  >
         <GlobalStyle />
         <Helmet>
@@ -18,6 +18,6 @@ export function wrapRootElement({ element, children, location }) {
 
         {element}
 
-        <Footer />
+        {/* <Footer /> */}
     </ThemeProvider>
 }
