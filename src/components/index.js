@@ -5,5 +5,6 @@ export { default as Banner } from './banner/index';
 export { default as Container } from './container/index';
 export { default as Title } from './title/index';
 export { default as Item } from './item/index';
+export { default as Card } from './card/index';
 
 

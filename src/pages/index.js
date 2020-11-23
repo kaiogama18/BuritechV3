@@ -1,9 +1,10 @@
 import React from "react";
 import Img from "gatsby-image";
 import { graphql } from "gatsby";
-import { Paragraph } from '../styles/styles';
-import { Button, Banner, Container, Title, Item } from '../components/index';
 import { Carousel } from "react-bootstrap";
+import { Paragraph } from '../styles/styles';
+import { Button, Banner, Container, Title, Item, Card } from '../components/index';
+
 
 function About({ about, img }) {
   return (
@@ -27,12 +28,7 @@ function Service({ services }) {
 
       <Item only={'desktop'}>
         {services.cards.map((card) => (
-          <div key={card.title} className="card" >
-            <Title normal>  {card.title} </Title>
-            <span className="material-icons">{card.icon}</span>
-            {card.text}
-            <Button text="Saiba Mais" link={card.url} />
-          </div>
+          <Card data={card} />
         ))}
       </Item>
 
@@ -40,12 +36,7 @@ function Service({ services }) {
         <Carousel indicators={false}>
           {services.cards.map((card) => (
             <Carousel.Item key={card.icon}>
-              <div key={card.title} className="card" >
-                <Title normal>  {card.title} </Title>
-                <span className="material-icons">{card.icon}</span>
-                {card.text}
-                <Button text="Saiba Mais" link={card.url} />
-              </div>
+              <Card data={card} />
             </Carousel.Item>
           ))}
         </Carousel>
@@ -64,7 +55,6 @@ export default ({ data }) => {
     </>
   )
 }
-
 
 export const query = graphql`
   query {
@@ -89,27 +79,27 @@ const Home = {
     title: 'Nossos Serviços',
     cards: [
       {
-        icon: 'devices',
+        img: 'devices',
         title: 'Sites e Aplicativos',
-        text: 'Criamos sites e/ou aplicativos responsivos para o seu negócio digital.',
+        content: 'Criamos sites e/ou aplicativos responsivos para o seu negócio digital.',
         url: '/'
       },
       {
-        icon: 'forum',
+        img: 'forum',
         title: 'Chatbots',
-        text: 'Facilite seu trabalho com um assistente que automatizará seu trabalho.',
+        content: 'Facilite seu trabalho com um assistente que automatizará seu trabalho.',
         url: '/'
       },
       {
-        icon: 'engineering',
+        img: 'engineering',
         title: 'Ciência de Dados',
-        text: 'Facilite seu trabalho contratando um cientista de dados.',
+        content: 'Facilite seu trabalho contratando um cientista de dados.',
         url: '/'
       },
       {
-        icon: 'psychology',
+        img: 'psychology',
         title: 'Treinamento em Machine Learning',
-        text: 'Domine o aprendizado de máquina com Python e torne-se um cientista.',
+        content: 'Domine o aprendizado de máquina com Python e torne-se um cientista.',
         url: '/'
       },
     ]
