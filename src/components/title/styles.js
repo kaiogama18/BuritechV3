@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Title = styled.h4`
+  padding: 1%;
   display: inline;
   font-weight: bold;
   background: linear-gradient(90deg, rgba(254,86,61,1) 35%, rgba(233,175,29,1) 100%);
@@ -8,6 +9,10 @@ export const Title = styled.h4`
   background-repeat: no-repeat;
   background-position: bottom 0 left -50px; 
   b { visibility:hidden }
+
+  @media screen and (max-width: 600px) {
+    margin-left: 3%;
+  }
 `;
 
 export const TNormal = styled.h5`

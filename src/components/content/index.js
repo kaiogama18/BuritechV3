@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Paragraph = styled.div`
-    margin: 1% 0;
+    margin: 3% 0;
     font-size: 1em;
     font-weight: normal;
     text-align: ${props => props.align}
@@ -11,8 +11,8 @@ const Paragraph = styled.div`
     }
 
     @media screen and (max-width: 600px) {
-        margin: 0 3%;
         text-align: justify;
+        margin: 10% 1%;
     }
 `;
 
