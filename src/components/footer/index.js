@@ -1,21 +1,21 @@
 import React from 'react';
 import Img from "gatsby-image"
-import { Container, Content, Item, Title } from '..';
 import { graphql, useStaticQuery } from 'gatsby';
+import { Container, Content, Item, Title } from '..';
 
 
 export default () => {
 
     const data = useStaticQuery(graphql`
-    query {
-      file(relativePath: { eq: "logo_white.png" }) {
-        childImageSharp {
-          fixed(width: 200, quality: 100) {
-            ...GatsbyImageSharpFixed_tracedSVG
-          }
+        query {
+            file(relativePath: { eq: "logo_white.png" }) {
+                childImageSharp {
+                    fixed(width: 200, quality: 100) {
+                        ...GatsbyImageSharpFixed_tracedSVG
+                    }
+                }
+            }
         }
-      }
-    }
     `)
 
     return (
@@ -29,21 +29,15 @@ export default () => {
                     {footer.links.map((link) => <Title link normal url={link.url} vertical>  {link.title} </Title>)}
                 </Item>
                 <Item flex>
-                    {footer.socials.map((social) => (
-                        <p key={social.icon}><span className="material-icons">{social.icon}</span>{social.description}</p>
-                    ))}
+                    {footer.socials.map((social) => <Content key={social.icon} icon={social.icon}> {social.description} </Content>)}
                     <hr />
-                    {footer.contacts.map((contact) => (
-                        <p key={contact.icon} ><span className="material-icons">{contact.icon}</span><b>{contact.title}</b> {contact.description} </p>
-                    ))}
+                    {footer.contacts.map((contact) => <Content key={contact.icon} icon={contact.icon} title={contact.title}> {contact.description} </Content>)}
                 </Item>
 
             </Container>
         </footer>
-
     )
 }
-
 
 const footer = {
     buriText: ' A Buritech é uma empresa da cidade de Manaus que oferece soluções de software, consultoria e treinamentos, desenvolvimento e aplicações Web e Mobile.',

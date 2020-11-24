@@ -4,6 +4,10 @@ export const Container = styled.div`
     padding: ${props => props.padding ? '2em 0' : '0'};
     background-color: ${props => props.backgroundColor};
     color: ${props => props.color};
+
+    @media screen and (max-width: 600px) {
+        display: ${props => (props.show === 'desktop' ? 'none' : null)};
+    }
 `;
 
 
@@ -15,4 +19,5 @@ export const Wrapper = styled.div`
     margin-left:  auto; 
     padding-right: 10px; 
     padding-left:  10px; 
+    justify-content: space-between;
 `;

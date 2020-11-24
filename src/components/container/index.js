@@ -4,9 +4,10 @@ import { Container, Wrapper } from './styles'
 export default function (props) {
     return (
         <Container
-            backgroundColor={props.backgroundColor}
+            show={props.only}
             color={props.color}
-            padding={props.vertical}>
+            padding={props.vertical}
+            backgroundColor={props.backgroundColor}>
             <Wrapper>
                 {props.children}
             </Wrapper>

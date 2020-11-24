@@ -16,6 +16,14 @@ export const GlobalStyle = createGlobalStyle`
         border-top: 1px solid #ffffff;
     }
 
+    nav {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;   
+    }
+
     .carousel-control-prev-icon,
     .carousel-control-next-icon {
         height: 100px;
