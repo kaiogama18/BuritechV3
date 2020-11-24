@@ -1,8 +1,7 @@
 import React from 'react';
 import Img from "gatsby-image";
-import { Container } from '../components';
-import Button from '../components/button/index';
 import { graphql, useStaticQuery } from 'gatsby';
+import { Button, Container, Title, Item } from '../components/index';
 
 export default () => {
 
@@ -11,7 +10,7 @@ export default () => {
       image: file(relativePath: { eq: "404.png" }) {
         base
         childImageSharp {
-          fluid(maxWidth: 700, quality: 100) {
+          fluid(maxWidth: 1000, quality: 100) {
             ...GatsbyImageSharpFluid_tracedSVG
             ...GatsbyImageSharpFluidLimitPresentationSize
           }
@@ -21,10 +20,12 @@ export default () => {
   `)
 
   return (
-    <Container>
-      <Img fluid={data.image.childImageSharp.fluid} />
-        Não encontramos este endereço, mas você <br /> ainda pode navegar pelo nosso site?
-      <Button text="ir para Home" link="/" />
+    <Container vertical>
+      <Item flex center>
+        <Img fluid={data.image.childImageSharp.fluid} />
+        <Title normal>  Não encontramos este endereço, mas você <br /> ainda pode navegar pelo nosso site? </Title>
+        <Button text="ir para Home" link="/" />
+      </Item>
     </Container>
   )
 }
