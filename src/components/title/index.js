@@ -1,17 +1,17 @@
-import { Link } from 'gatsby';
 import React from 'react';
-import styled from 'styled-components';
+import { Link } from 'gatsby';
 import { Title, TNormal, ListLink } from './styles'
 
 export default function (props) {
   return (
-    props.link ? (
-      <ListLink padding={props.vertical}>
-        <Link to={props.url} activeStyle={{ color: "red" }} >{props.children}</Link>
-      </ListLink>
-    ) : (
-        props.normal ? <TNormal> {props.children} </TNormal> :
-          <Title><b>.</b>{props.children} </Title>
+    !props.link ? (
+      props.normal ? <TNormal> {props.children} </TNormal> :
+        <Title><b>.</b>{props.children} </Title>
+    ) :
+      (
+        <ListLink padding={props.vertical} show={props.only}>
+          <Link key={props.children} to={props.url} activeStyle={{ color: "#e8b11c" }} >{props.children}</Link>
+        </ListLink>
       )
   )
 }

@@ -27,7 +27,6 @@ const Card = styled.div`
 `;
 
 export default function ({ data }) {
-    console.log(data)
     return (
         <Card>
             <Title normal>  {data.title} </Title>

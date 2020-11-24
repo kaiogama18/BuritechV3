@@ -1,7 +1,7 @@
 import React from 'react';
 import Img from "gatsby-image"
 import { Container, Content, Item, Title } from '..';
-import { graphql, Link, useStaticQuery } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 
 
 export default () => {
@@ -84,7 +84,7 @@ const footer = {
         },
         {
             title: 'Endereço:',
-            description: 'UFAM - Coroado, Manaus - AM',
+            description: ' UFAM, Av. Octávio Hamilton Botelho Mourão Coroado, Manaus - AM',
             icon: 'location_on'
         },
     ]

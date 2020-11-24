@@ -31,4 +31,8 @@ export const ListLink = styled.div`
     }
   }
 
+  @media screen and (max-width: 600px) {
+    display: ${props => (props.show === 'desktop' ? 'none' : null)};
+  }
+
 `;

@@ -10,7 +10,7 @@ function About({ about, img }) {
     <Container>
       <Item flex>
         <Title>  {about.title} </Title>
-        <Content> {about.content}  </Content>
+        <Content> Somos uma empresa regional especializada em <b>desenvolvimento de software</b> e na realização de treinamentos técnicos em linguagens de   programação, engenharia de softwares e áreas relacionadas.  </Content>
         <Button text="Saiba Mais" link="/" />
       </Item>
       <Item flex>
