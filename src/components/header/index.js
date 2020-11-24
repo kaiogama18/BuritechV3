@@ -3,6 +3,17 @@ import Img from "gatsby-image"
 import { Container, Content, Title } from '..';
 import { graphql, useStaticQuery } from 'gatsby';
 
+
+function Contacts() {
+  return (
+    <Container backgroundColor={'#1a1a1a'} color={'#fff'} only={'desktop'} >
+      {navbar.contacts.map((contact) =>
+        <Content key={contact.title} icon={contact.icon} title={contact.title} position={contact.position} flex> {contact.description} </Content>
+      )}
+    </Container>
+  );
+}
+
 export default () => {
 
   const data = useStaticQuery(graphql`
@@ -16,14 +27,6 @@ export default () => {
       }
     }
   `)
-
-  const Contacts = props => (
-    <Container backgroundColor={'#1a1a1a'} color={'#fff'} only={'desktop'} >
-      {navbar.contacts.map((contact) =>
-        <Content key={contact.title} icon={contact.icon} title={contact.title} position={contact.position} flex> {contact.description} </Content>
-      )}
-    </Container>
-  )
 
   const ListLink = props => (
     props.img === 'true' ? <Title link normal url={props.to}> <Img fixed={data.file.childImageSharp.fixed} alt={props.children} /> </Title>
@@ -90,5 +93,3 @@ const navbar = {
   ],
 
 };
-
-
