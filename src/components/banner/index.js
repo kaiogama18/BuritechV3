@@ -8,30 +8,30 @@ export default () => {
 
   const data = useStaticQuery(graphql`
     query {
-      mobileImage: file(relativePath: { eq: "banner/banner-mobile.jpg" }) {
+      mobileImage: file(relativePath: { eq: "banner/banner-mobile.webp" }) {
         base
         childImageSharp {
           fluid(maxWidth: 1000, quality: 100) {
-            ...GatsbyImageSharpFluid_tracedSVG
+            ...GatsbyImageSharpFluid_withWebp
             ...GatsbyImageSharpFluidLimitPresentationSize
           }
         }
       }
       desktopImage: file(
-        relativePath: { eq: "banner/banner-ultrawide.jpg" }
+        relativePath: { eq: "banner/banner-ultrawide.webp" }
       ) {
         base
         childImageSharp {
           fluid(maxWidth: 2000, quality: 100) {
-            ...GatsbyImageSharpFluid_tracedSVG
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
-      normalImage: file(relativePath: { eq: "banner/banner-widescreen.jpg" }) {
+      normalImage: file(relativePath: { eq: "banner/banner-widescreen.webp" }) {
         base
         childImageSharp {
           fluid(maxWidth: 1000, quality: 100) {
-            ...GatsbyImageSharpFluid_tracedSVG
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
