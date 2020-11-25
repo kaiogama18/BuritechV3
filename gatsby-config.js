@@ -3,9 +3,47 @@ module.exports = {
   siteMetadata,
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sitemap`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'http://buritech.netlify.app/',
+        sitemap: 'http://buritech.netlify.app/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/', disallow: '/search' }]
+      }
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: [`/search`],
+        query: `
+          {
+            site {
+              siteMetadata {
+                siteUrl
+              }
+            }
+  
+            allSitePage {
+              nodes {
+                path
+              }
+            }
+        }`,
+        resolveSiteUrl: ({ site, allSitePage }) => {
+          return site.siteMetadata.siteUrl
+        },
+        serialize: ({ site, allSitePage }) =>
+          allSitePage.nodes.map(node => {
+            return {
+              url: `${site.siteMetadata.siteUrl}${node.path}`,
+              changefreq: `never`,
+              priority: 0.5,
+            }
+          })
+      }
+    },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {

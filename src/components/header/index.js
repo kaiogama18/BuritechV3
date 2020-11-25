@@ -18,10 +18,10 @@ export default () => {
 
   const data = useStaticQuery(graphql`
     query photo {
-      file(relativePath: { eq: "logo_white.png" }) {
+      file(relativePath: { eq: "logo_white.webp" }) {
         childImageSharp {
           fixed(width: 104) {
-            ...GatsbyImageSharpFixed_tracedSVG
+            ...GatsbyImageSharpFixed_withWebp
           }
         }
       }

@@ -20,7 +20,7 @@ const Card = styled.div`
 
     .material-icons {
         margin: 3% 0;
-        color: #e8b11c;
+        color: #856201;
         font-size: 5em;
         font-family: 'Material Icons';
     }
