@@ -12,6 +12,7 @@ export function wrapRootElement({ element }) {
         <GlobalStyle />
         <Helmet>
             <meta charSet="utf-8" />
+            {/* <meta http-equiv="Content-Language" content="pt-br"/> */}
             <meta name="description" content="A Buritech é uma empresa com foco em Machine Learning, aplicativos mobile e web sites, situada em Manaus-Am." />
             <meta name="keywords" content="machine learning, desenvolvimento de aplicativo, desenvolvimento mobile, web design, desenvolvimento iphone, desenvolvimento android, desenvolvimento de site, tecnologia." />
             <meta name="author" content="Buritech" />

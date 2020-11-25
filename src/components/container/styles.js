@@ -6,6 +6,7 @@ export const Container = styled.div`
     color: ${props => props.color};
 
     @media screen and (max-width: 600px) {
+        padding: 1em 0;
         display: ${props => (props.show === 'desktop' ? 'none' : null)};
     }
 `;

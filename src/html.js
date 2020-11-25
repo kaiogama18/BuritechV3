@@ -5,7 +5,7 @@ import typography from "./utils/typography"
 
 export default function HTML(props) {
   return (
-    <html {...props.htmlAttributes}>
+    <html {...props.htmlAttributes} lang="pt-br">
       <head>
 
         <meta charSet="utf-8" />

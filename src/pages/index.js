@@ -57,11 +57,11 @@ export default ({ data }) => {
 
 export const query = graphql`
   query {
-    image: file(relativePath: { eq: "team.jpg" }) {
+    image: file(relativePath: { eq: "team.webp" }) {
       base
       childImageSharp {
         fluid(maxWidth: 1000, quality: 100) {
-          ...GatsbyImageSharpFluid_tracedSVG
+          ...GatsbyImageSharpFluid_withWebp
           ...GatsbyImageSharpFluidLimitPresentationSize
         }
       }

@@ -80,6 +80,9 @@ module.exports = {
         display: `standalone`,
         icon: 'src/assets/icon.png'
       },
+      icon_options: {
+        purpose: `any maskable`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,

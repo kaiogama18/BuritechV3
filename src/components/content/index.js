@@ -20,7 +20,7 @@ const Contact = styled.p`
     align-items: center;
     justify-content: center;  
     display: ${props => props.flex ? 'flex' : null};
-    font-size: ${props => props.small ? '12px' : null};  
+    font-size: ${props => props.small ? '10px' : null};  
     margin: ${props => props.small ? '1rem 1rem 1rem 0' : null}; 
 
     b {
