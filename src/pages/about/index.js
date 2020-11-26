@@ -6,27 +6,27 @@ import { Container, Content, Item, Title, Button } from "../../components"
 export default () => {
 
     const data = useStaticQuery(graphql`
-    query {
-        img1: file(relativePath: { eq: "about/img1.webp" }) {
-        base
-        childImageSharp {
-          fluid(maxWidth: 1000, quality: 100) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
+        query {
+            img1: file(relativePath: { eq: "about/img1.webp" }) {
+            base
+            childImageSharp {
+                fluid(maxWidth: 1000, quality: 100) {
+                    ...GatsbyImageSharpFluid_withWebp
+                }
+            }
         }
-      }
-      img2: file(
-        relativePath: { eq: "about/img2.webp" }
-      ) {
-        base
-        childImageSharp {
-          fluid(maxWidth: 2000, quality: 100) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
+            img2: file(
+                relativePath: { eq: "about/img2.webp" }
+            ) {
+                base
+                childImageSharp {
+                    fluid(maxWidth: 2000, quality: 100) {
+                        ...GatsbyImageSharpFluid_withWebp
+                    }
+                }
+            }
         }
-      }
-    }
-  `)
+    `)
 
     return (
         <Container vertical>
