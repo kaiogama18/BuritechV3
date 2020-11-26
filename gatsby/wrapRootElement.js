@@ -17,7 +17,7 @@ export function wrapRootElement({ element }) {
             <meta name="keywords" content="machine learning, desenvolvimento de aplicativo, desenvolvimento mobile, web design, desenvolvimento iphone, desenvolvimento android, desenvolvimento de site, tecnologia." />
             <meta name="author" content="Buritech" />
             {/* <link rel="canonical" href="http://buritech.com.br/" /> */}
-            <link rel="canonical" href="http://buritech.netlify.app/" />
+            <link rel="canonical" href="https://buritech.netlify.app/" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <title>Buritech | Soluções em Machine Learning</title>
         </Helmet>

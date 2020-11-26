@@ -8,8 +8,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'http://buritech.netlify.app/',
-        sitemap: 'http://buritech.netlify.app/sitemap.xml',
+        host: 'https://buritech.netlify.app/',
+        sitemap: 'https://buritech.netlify.app/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/', disallow: '/search' }]
       }
     },
