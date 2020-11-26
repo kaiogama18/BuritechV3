@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 Disallow: /search
-Sitemap: http://buritech.netlify.app/sitemap.xml
-Host: buritech.netlify.app
+Sitemap: https://buritech.netlify.app/sitemap.xml
+Host: https://buritech.netlify.app
