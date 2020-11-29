@@ -6,7 +6,10 @@ export default () => {
   return (
     <Form>
       <Container vertical>
+      <Item flex align={"center"}>
         <Title>  Nos envie um email: </Title>
+      </Item>
+
       </Container>
       <Container backgroundColor={'#edf3f9'} >
         <Item flex align={"center"}>
