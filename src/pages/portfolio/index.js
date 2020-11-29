@@ -8,7 +8,7 @@ export default () => {
 
   const data = useStaticQuery(graphql`
         query {
-            img1: file(relativePath: { eq: "portfolio/chatbot.webp" }) {
+            img1: file(relativePath: { eq: "portfolio/chat.webp" }) {
             base
             childImageSharp {
                 fluid(maxWidth: 1000, quality: 100) {
@@ -26,10 +26,19 @@ export default () => {
                     }
                 }
             }
+
+            img3: file(relativePath: { eq: "portfolio/metodologia.webp" }) {
+              base
+              childImageSharp {
+                fluid(maxWidth: 1000, quality: 100) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
         }
     `)
 
-  
+
 
   return (
     <>
@@ -37,25 +46,21 @@ export default () => {
         <Item flex>
           <Title>  Sites e Aplicativo </Title>
           <Content>
-            A Buritech desenvolve <b>soluções web</b> para auxiliar nos processos de
-        negócio da sua empresa, como sites para venda de produtos/serviços,
-        extração de dados para criação de relatórios gerenciais, entre outros
-        serviços.
-        <br />
-
-            <b>Aplicativos</b> para Android e iOS também podem ser desenvolvidos para
-        auxiliar nos negócios dos nossos clientes.
-        <br />
-        Em geral, já há um sistema de retaguarda e API de acesso às bases de
-        dados. Nesse caso, nosso time de desenvolvimento trabalha em
-        parceria com o time técnico do cliente na construção do aplicativo.
-      </Content>
+            A Buritech desenvolve <b>soluções web</b> para auxiliar nos processos de negócio da sua empresa, como sites para venda de produtos/serviços,
+            extração de dados para criação de relatórios gerenciais, entre outros serviços.
+          </Content>
+          <Content> <b>Aplicativos</b> para Android e iOS também podem ser desenvolvidos para auxiliar nos negócios dos nossos clientes.</Content>
+          <Content> Em geral, já há um sistema de retaguarda e API de acesso às bases de dados. Nesse caso, nosso time de desenvolvimento trabalha em parceria com o time técnico do cliente na construção do aplicativo. </Content>
+        </Item>
+        <Item >
+          <Content>
+            <Title normal>  Metodologia para sites e aplicativos: </Title>
+            <Img fluid={data.img3.childImageSharp.fluid} />
+          </Content>
         </Item>
       </Container>
 
       <Container backgroundColor={'#edf3f9'} vertical>
-
-
         <Item flex> <Img fluid={data.img1.childImageSharp.fluid} />  </Item>
         <Item flex>
           <Title>  ChatBOTs </Title>
@@ -64,15 +69,13 @@ export default () => {
             executar tarefas para o qual foi ensinado, é necessário seguir algumas etapas do projeto.
           </Content>
           <Content>
-            Aqui chamamos de <b> “Jornada Chatbot : </b>
+            Aqui chamamos de <b> "Jornada Chatbot":</b>
           </Content>
         </Item>
       </Container>
       <Container backgroundColor={'#edf3f9'} >
-      <Item flex> <Img fluid={data.img2.childImageSharp.fluid} />  </Item>
-
+        <Item flex> <Img fluid={data.img2.childImageSharp.fluid} />  </Item>
       </Container>
-
       <Container vertical>
         <Item flex>
           <Title>  Ciência de Dados </Title>
