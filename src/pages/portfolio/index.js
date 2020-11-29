@@ -62,7 +62,7 @@ export default () => {
 
       <Container backgroundColor={'#edf3f9'} vertical>
         <Item flex> <Img fluid={data.img1.childImageSharp.fluid} />  </Item>
-        <Item flex>
+        <Item flex align={"end"}>
           <Title>  ChatBOTs </Title>
           <Content>
             Todo BOT é especializado em um assunto e para que ele seja capaz de interagir com um humano e

@@ -7,9 +7,11 @@ const Flex = styled.div`
   align-self: center;
   text-align: ${props => (props.center ? 'center' : null)};
   display: ${props => (props.show === 'mobile' ? 'none' : null)};
+  text-align: ${props => ( props.align ? props.align : null)};
 
   @media screen and (max-width: 600px) {
     flex: auto;
+    text-align: justify;
     display: ${props => (props.show === 'mobile' ? 'flex' : null)};
     display: ${props => (props.show === 'desktop' ? 'none' : null)};
   }
@@ -29,5 +31,5 @@ const Item = styled.div`
 
 
 export default function (props) {
-  return (props.flex ? (<Flex show={props.only} center={props.center}> {props.children} </Flex>) : (<Item show={props.only} center={props.center}> {props.children} </Item>))
+  return (props.flex ? (<Flex show={props.only} center={props.center} align={props.align}> {props.children} </Flex>) : (<Item show={props.only} center={props.center} align={props.align}> {props.children} </Item>))
 }

@@ -1,38 +1,30 @@
 import React from "react"
+import { Form } from './styles'
 import { Container, Item, Title, Button } from "../../components"
 
 export default () => {
   return (
-    <Container vertical>
-
-      <Item flex center>
+    <Form>
+      <Container vertical>
         <Title>  Nos envie um email: </Title>
+      </Container>
+      <Container backgroundColor={'#edf3f9'} >
+        <Item flex align={"center"}>
+          <form action="/" id="usrform">
 
+            <label for="usrname">Seu nome:</label>
+            <input type="text" name="usrname" value=""/>
 
-        <Container vertical>
-
-          <form>
-            <label for="fname">Seu nome:</label><br />
-            <input type="text" id="fname" name="fname" value="" /><br />
-
-            <label for="lname">Mensagem:</label><br />
-            <input type="text" id="lname" name="lname" value="" /><br />
-
-
-            <label for="lemail">Seu email:</label><br />
-            <input type="text" id="lemail" name="lemail" value="" /><br />
-
-
-            <Button type="submit"  text="Enviar" link="/" />
+            <label for="lname">Mensagem:</label>
+            <textarea rows="4" cols="50" name="comment" form="usrform"/>
+           
+            <label for="usremail">Seu email:</label>
+            <input type="email" name="usremail" value=""/>
+            
+            <Button type="submit" text="Enviar" link="/" />
           </form>
-
-        </Container>
-
-
-
-
-      </Item>
-
-    </Container>
+        </Item>
+      </Container>
+    </Form>
   )
 }
