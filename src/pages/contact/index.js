@@ -15,13 +15,13 @@ export default () => {
         <Item flex align={"center"}>
           <form action="/" id="usrform">
 
-            <label for="usrname">Seu nome:</label>
+            <label  htmlFor="usrname">Seu nome:</label>
             <input type="text" name="usrname" value=""/>
 
-            <label for="lname">Mensagem:</label>
+            <label  htmlFor="lname">Mensagem:</label>
             <textarea rows="4" cols="50" name="comment" form="usrform"/>
            
-            <label for="usremail">Seu email:</label>
+            <label  htmlFor="usremail">Seu email:</label>
             <input type="email" name="usremail" value=""/>
             
             <Button type="submit" text="Enviar" link="/" />
