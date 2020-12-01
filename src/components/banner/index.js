@@ -55,7 +55,7 @@ export default () => {
       <Carousel.Item>
         <Img fluid={sources} alt="O que é a buritech?" />
         <Carousel.Caption>
-          <Button text="Descubra" link="/" />
+          <Button text="Descubra" link="/about" />
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

@@ -11,6 +11,7 @@ const Flex = styled.div`
 
   @media screen and (max-width: 600px) {
     flex: auto;
+    margin-top: 5%;
     text-align: justify;
     display: ${props => (props.show === 'mobile' ? 'flex' : null)};
     display: ${props => (props.show === 'desktop' ? 'none' : null)};

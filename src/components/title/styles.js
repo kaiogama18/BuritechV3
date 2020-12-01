@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Title = styled.h4`
-  padding: 1%;
+  padding: 1% 0;
   display: inline;
   font-weight: bold;
   background: linear-gradient(90deg, rgba(254,86,61,1) 35%, rgba(233,175,29,1) 100%);
@@ -11,13 +11,20 @@ export const Title = styled.h4`
   b { visibility:hidden }
 
   @media screen and (max-width: 600px) {
-    margin-left: 3%;
+    display: flex;
+    justify-content: center;
+    background-position: bottom 0 left -100px; 
   }
 `;
 
 export const TNormal = styled.h5`
   display: inline;
   font-weight: bold;
+  @media screen and (max-width: 600px) {
+    margin: 5% 0;
+    display: flex;
+    text-align: center;
+  }
 `;
 
 
