@@ -1,12 +1,12 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("C:\\Users\\kaiog\\Documents\\GitHub\\BuritechV3\\node_modules\\@reach\\router\\index.js"), require("fs"), require("C:\\Users\\kaiog\\Documents\\GitHub\\BuritechV3\\node_modules\\lodash\\merge.js"), require("path"), require("react"), require("react-dom/server"), require("react-helmet"));
+		module.exports = factory(require("/home/kaio/Documentos/GitHub/BuritechV3/node_modules/@reach/router/index.js"), require("fs"), require("/home/kaio/Documentos/GitHub/BuritechV3/node_modules/lodash/merge.js"), require("path"), require("react"), require("react-dom/server"), require("react-helmet"));
 	else if(typeof define === 'function' && define.amd)
-		define("lib", ["C:\\Users\\kaiog\\Documents\\GitHub\\BuritechV3\\node_modules\\@reach\\router\\index.js", "fs", "C:\\Users\\kaiog\\Documents\\GitHub\\BuritechV3\\node_modules\\lodash\\merge.js", "path", "react", "react-dom/server", "react-helmet"], factory);
+		define("lib", ["/home/kaio/Documentos/GitHub/BuritechV3/node_modules/@reach/router/index.js", "fs", "/home/kaio/Documentos/GitHub/BuritechV3/node_modules/lodash/merge.js", "path", "react", "react-dom/server", "react-helmet"], factory);
 	else if(typeof exports === 'object')
-		exports["lib"] = factory(require("C:\\Users\\kaiog\\Documents\\GitHub\\BuritechV3\\node_modules\\@reach\\router\\index.js"), require("fs"), require("C:\\Users\\kaiog\\Documents\\GitHub\\BuritechV3\\node_modules\\lodash\\merge.js"), require("path"), require("react"), require("react-dom/server"), require("react-helmet"));
+		exports["lib"] = factory(require("/home/kaio/Documentos/GitHub/BuritechV3/node_modules/@reach/router/index.js"), require("fs"), require("/home/kaio/Documentos/GitHub/BuritechV3/node_modules/lodash/merge.js"), require("path"), require("react"), require("react-dom/server"), require("react-helmet"));
 	else
-		root["lib"] = factory(root["C:\\Users\\kaiog\\Documents\\GitHub\\BuritechV3\\node_modules\\@reach\\router\\index.js"], root["fs"], root["C:\\Users\\kaiog\\Documents\\GitHub\\BuritechV3\\node_modules\\lodash\\merge.js"], root["path"], root["react"], root["react-dom/server"], root["react-helmet"]);
+		root["lib"] = factory(root["/home/kaio/Documentos/GitHub/BuritechV3/node_modules/@reach/router/index.js"], root["fs"], root["/home/kaio/Documentos/GitHub/BuritechV3/node_modules/lodash/merge.js"], root["path"], root["react"], root["react-dom/server"], root["react-helmet"]);
 })(this, function(__WEBPACK_EXTERNAL_MODULE__reach_router__, __WEBPACK_EXTERNAL_MODULE_fs__, __WEBPACK_EXTERNAL_MODULE_lodash_merge__, __WEBPACK_EXTERNAL_MODULE_path__, __WEBPACK_EXTERNAL_MODULE_react__, __WEBPACK_EXTERNAL_MODULE_react_dom_server__, __WEBPACK_EXTERNAL_MODULE_react_helmet__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -49905,6 +49905,24 @@ module.exports = JSON.parse("{\"data\":{\"file\":{\"childImageSharp\":{\"fixed\"
 
 /***/ }),
 
+/***/ "./src/components/ad/index.js":
+/*!************************************!*\
+  !*** ./src/components/ad/index.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "ajuste");
+});
+
+/***/ }),
+
 /***/ "./src/components/banner/index.js":
 /*!****************************************!*\
   !*** ./src/components/banner/index.js ***!
@@ -49941,7 +49959,7 @@ var _public_page_data_sq_d_2792232562_json__WEBPACK_IMPORTED_MODULE_0___namespac
     alt: "O que \xE9 a buritech?"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Carousel"].Caption, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(___WEBPACK_IMPORTED_MODULE_2__["Button"], {
     text: "Descubra",
-    link: "/"
+    link: "/about"
   }))));
 });
 
@@ -50335,7 +50353,7 @@ var navbar = {
 /*!*********************************!*\
   !*** ./src/components/index.js ***!
   \*********************************/
-/*! exports provided: Footer, Header, Button, Banner, Container, Title, Item, Card, Content */
+/*! exports provided: Footer, Header, Button, Banner, Container, Title, Item, Card, Content, Ad */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -50367,6 +50385,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _content_index__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./content/index */ "./src/components/content/index.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Content", function() { return _content_index__WEBPACK_IMPORTED_MODULE_8__["default"]; });
 
+/* harmony import */ var _ad_index__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./ad/index */ "./src/components/ad/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Ad", function() { return _ad_index__WEBPACK_IMPORTED_MODULE_9__["default"]; });
+
+
 
 
 
@@ -50395,7 +50417,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var Flex = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
   displayName: "item__Flex"
-})(["flex:1;padding:1%;align-self:center;text-align:", ";display:", ";text-align:", ";@media screen and (max-width:600px){flex:auto;text-align:justify;display:", ";display:", ";}"], function (props) {
+})(["flex:1;padding:1%;align-self:center;text-align:", ";display:", ";text-align:", ";@media screen and (max-width:600px){flex:auto;margin-top:5%;text-align:justify;display:", ";display:", ";}"], function (props) {
   return props.center ? 'center' : null;
 }, function (props) {
   return props.show === 'mobile' ? 'none' : null;
@@ -50478,10 +50500,10 @@ __webpack_require__.r(__webpack_exports__);
 
 var Title = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].h4.withConfig({
   displayName: "styles__Title"
-})(["padding:1%;display:inline;font-weight:bold;background:linear-gradient(90deg,rgba(254,86,61,1) 35%,rgba(233,175,29,1) 100%);background-size:100% 4px;background-repeat:no-repeat;background-position:bottom 0 left -50px;b{visibility:hidden}@media screen and (max-width:600px){margin-left:3%;}"]);
+})(["padding:1% 0;display:inline;font-weight:bold;background:linear-gradient(90deg,rgba(254,86,61,1) 35%,rgba(233,175,29,1) 100%);background-size:100% 4px;background-repeat:no-repeat;background-position:bottom 0 left -50px;b{visibility:hidden}@media screen and (max-width:600px){display:flex;justify-content:center;background-position:bottom 0 left -100px;}"]);
 var TNormal = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].h5.withConfig({
   displayName: "styles__TNormal"
-})(["display:inline;font-weight:bold;"]);
+})(["display:inline;font-weight:bold;@media screen and (max-width:600px){margin:5% 0;display:flex;text-align:center;}"]);
 var ListLink = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__ListLink"
 })(["text-align:center;padding:", ";a{color:white;text-decoration:none;font-family:system-ui;text-transform:uppercase;transition:all 0.3s ease 0s;&:hover{color:", ";}}@media screen and (max-width:600px){display:", ";}"], function (props) {
@@ -50638,9 +50660,9 @@ var scale = typography.scale,
 /***/ }),
 
 /***/ "@reach/router":
-/*!**********************************************************************************************************!*\
-  !*** external "C:\\Users\\kaiog\\Documents\\GitHub\\BuritechV3\\node_modules\\@reach\\router\\index.js" ***!
-  \**********************************************************************************************************/
+/*!**********************************************************************************************!*\
+  !*** external "/home/kaio/Documentos/GitHub/BuritechV3/node_modules/@reach/router/index.js" ***!
+  \**********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -50660,9 +50682,9 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_fs__;
 /***/ }),
 
 /***/ "lodash/merge":
-/*!**************************************************************************************************!*\
-  !*** external "C:\\Users\\kaiog\\Documents\\GitHub\\BuritechV3\\node_modules\\lodash\\merge.js" ***!
-  \**************************************************************************************************/
+/*!***************************************************************************************!*\
+  !*** external "/home/kaio/Documentos/GitHub/BuritechV3/node_modules/lodash/merge.js" ***!
+  \***************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 

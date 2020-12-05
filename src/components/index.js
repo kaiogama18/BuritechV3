@@ -7,5 +7,5 @@ export { default as Title } from './title/index';
 export { default as Item } from './item/index';
 export { default as Card } from './card/index';
 export { default as Content } from './content/index';
-
+export { default as Ad } from './ad/index';
 
