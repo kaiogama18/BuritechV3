@@ -9,8 +9,8 @@ This project exists thanks to all the people who contribute.
 
 
 <p align="center">
-  <a href="https://wedo-market.herokuapp.com/">
-    <img alt="logo Wedo" style="fill: blue;" src="https://wedo-market.herokuapp.com/img/logo-Wedo-mini.png" width="50%" />
+  <a href="http://buritech.netlify.app/">
+    <img alt="logo Buritech" style="fill: blue;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpOsSdm7UqW0eBjzYPyP4wWou-5a6nku8SmQ&usqp=CAU" width="50%" />
   </a>
 </p>
 <p align="center">
