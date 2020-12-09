@@ -2,7 +2,7 @@ import React from "react";
 import Img from "gatsby-image";
 import { graphql } from "gatsby";
 import { Carousel } from "react-bootstrap";
-import { Button, Banner, Container, Title, Item, Card, Content} from '../components/index';
+import { Button, Banner, Container, Title, Item, Card, Content, Ad} from '../components/index';
 
 
 function About({ about, img }) {
@@ -48,10 +48,10 @@ function Service({ services }) {
 export default ({ data }) => {
   return (
     <>
-      <Banner />
+      <Banner/>
       <About about={Home.about} img={data.image.childImageSharp.fluid} />
       <Service services={Home.services} />
-      
+      <Ad/>
     </>
   )
 }
