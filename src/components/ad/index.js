@@ -1,27 +1,57 @@
 import React from 'react'
-import Img from 'gatsby-image'
-import {Carousel} from 'react-bootstrap'
 import {Title, Button } from '..'
 import { graphql, useStaticQuery } from 'gatsby'
-
+import { Ad } from './styles'
 export default () => {
-	
-	const data = useStaticQuery(graphql`query { image: file(relativePath: { eq: "banner/banner-widescreen.webp"}) {
-		childImageSharp { fluid(maxWidth: 1000, quality: 100) { ...GatsbyImageSharpFluid_withWebp }
-				}
-			}
+
+	const data = useStaticQuery(graphql`
+	    query {
+	      mobileImage: file(relativePath: { eq: "banner/banner-mobile.webp" }) {
+		base
+		childImageSharp {
+		  fluid(maxWidth: 1000, quality: 100) {
+		    ...GatsbyImageSharpFluid_withWebp
+		    ...GatsbyImageSharpFluidLimitPresentationSize
+		  }
 		}
-	`)
-	
+	      }
+	      desktopImage: file(
+		relativePath: { eq: "banner/banner-ultrawide.webp" }
+	      ) {
+		base
+		childImageSharp {
+		  fluid(maxWidth: 2000, quality: 100) {
+		    ...GatsbyImageSharpFluid_withWebp
+		  }
+		}
+	      }
+	      normalImage: file(relativePath: { eq: "banner/banner-widescreen.webp" }) {
+		base
+		childImageSharp {
+		  fluid(maxWidth: 1000, quality: 100) {
+		    ...GatsbyImageSharpFluid_withWebp
+		  }
+		}
+	      }
+	    }
+	  `)
+
+	  const sources = [
+	    data.mobileImage.childImageSharp.fluid,
+	    {
+	      ...data.desktopImage.childImageSharp.fluid,
+	      media: `(min-width: 1440px)`,
+	    },
+	    {
+	      ...data.normalImage.childImageSharp.fluid,
+	      media: `(min-width: 768px)`,
+	    },
+	  ]
+
 	return (
-		<Carousel indicators={false} controls={false}>
-			<Carousel.Item>	
-				<Img fluid={data.image.childImageSharp.fluid}/>
-				<Carousel.Caption>
-					<Title normal>Faça um orçamento </Title>
-					<Button text='Enviar Email' link='/contact' />
-				</Carousel.Caption>
-			</Carousel.Item>
-		</Carousel>
+		<Ad>
+			<Title>Faça um orçamento</Title>
+			<Button text="Enviar Email" link="/contact"/>
+		</Ad>
 	)
 }
