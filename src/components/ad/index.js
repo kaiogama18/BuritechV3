@@ -1,8 +1,10 @@
 import React from 'react'
-import {Button, Title } from '..'
+import {Button, Title, Container, Item } from '..'
 import { graphql, useStaticQuery } from 'gatsby'
 import { Ad } from './styles'
-import Img from "gatsby-image";
+import BackgroundImage from 'gatsby-background-image'
+
+
 export default () => {
 
 	const data = useStaticQuery(graphql`
@@ -49,12 +51,15 @@ export default () => {
 
 	return (
 		<Ad img={sources}>
-			<div class="bc-banner-body">
+		<BackgroundImage Tag="section" fluid={sources}>
+		<Container vertical> 
+		<Item flex>
 				<Title normal>Faça um orçamento</Title> 
 				<p>Nos conte sobre sua ideia e iremos te ajudar a torná-la realidade</p>
 				<Button text="Enviar Email" link="/contact"/>
-			</div>	
-			<Img fluid={sources} alt="O que é a buritech?" />		
+	</Item>
+		</Container>
+		</BackgroundImage>
 		</Ad>
 	)
 }
