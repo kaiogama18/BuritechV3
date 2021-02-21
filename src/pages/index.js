@@ -1,57 +1,70 @@
-import React from "react";
-import Img from "gatsby-image";
-import { graphql } from "gatsby";
-import { Carousel } from "react-bootstrap";
-import { Button, Banner, Container, Title, Item, Card, Content, Ad} from '../components/index';
-
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
+import React from "react"
+import { Carousel } from "react-bootstrap"
+import {
+  Ad,
+  Banner,
+  Button,
+  Card,
+  Container,
+  Content,
+  Item,
+  Title
+} from "../components/index"
 
 function About({ about, img }) {
   return (
     <Container>
       <Item flex>
-        <Title>  {about.title} </Title>
-        <Content> Somos uma empresa regional especializada em <b>desenvolvimento de software</b> e na realização de treinamentos técnicos em linguagens de   programação, engenharia de softwares e áreas relacionadas.  </Content>
+        <Title> {about.title} </Title>
+        <Content>
+          {" "}
+          Somos uma empresa regional especializada em{" "}
+          <b>desenvolvimento de software</b> e na realização de treinamentos
+          técnicos em linguagens de programação, engenharia de softwares e áreas
+          relacionadas.{" "}
+        </Content>
         <Button text="Saiba Mais" link="/" />
       </Item>
       <Item flex>
         <Img fluid={img} />
       </Item>
     </Container>
-  );
+  )
 }
 
 function Service({ services }) {
   return (
-    <Container backgroundColor={'#edf3f9'} vertical>
-      <Title>  {services.title} </Title>
+    <Container backgroundColor={"#edf3f9"} vertical>
+      <Title> {services.title} </Title>
 
-      <Item only={'desktop'}>
-        {services.cards.map((card) => (
+      <Item only={"desktop"}>
+        {services.cards.map(card => (
           <Card data={card} />
         ))}
       </Item>
 
-      <Item only={'mobile'}>
+      <Item only={"mobile"}>
         <Carousel indicators={false}>
-          {services.cards.map((card) => (
+          {services.cards.map(card => (
             <Carousel.Item key={card.icon}>
               <Card data={card} />
             </Carousel.Item>
           ))}
         </Carousel>
       </Item>
-
     </Container>
-  );
+  )
 }
 
 export default ({ data }) => {
   return (
     <>
-      <Banner/>
+      <Banner />
       <About about={Home.about} img={data.image.childImageSharp.fluid} />
       <Service services={Home.services} />
-      <Ad/>
+      <Ad />
     </>
   )
 }
@@ -72,37 +85,40 @@ export const query = graphql`
 
 const Home = {
   about: {
-    title: 'Quem Somos',
-    content: 'Somos uma empresa regional especializada em <b>desenvolvimento de software</b> e na realização de treinamentos técnicos em linguagens de   programação, engenharia de softwares e áreas relacionadas.'
+    title: "Quem Somos",
+    content:
+      "Somos uma empresa regional especializada em <b>desenvolvimento de software</b> e na realização de treinamentos técnicos em linguagens de   programação, engenharia de softwares e áreas relacionadas.",
   },
   services: {
-    title: 'Nossos Serviços',
+    title: "Nossos Serviços",
     cards: [
       {
-        img: 'devices',
-        title: 'Sites e Aplicativos',
-        content: 'Criamos sites e/ou aplicativos responsivos para o seu negócio digital.',
-        url: '/'
+        img: "devices",
+        title: "Sites e Aplicativos",
+        content:
+          "Criamos sites e/ou aplicativos responsivos para o seu negócio digital.",
+        url: "/",
       },
       {
-        img: 'forum',
-        title: 'Chatbots',
-        content: 'Facilite seu trabalho com um assistente que automatizará seu trabalho.',
-        url: '/'
+        img: "forum",
+        title: "Chatbots",
+        content:
+          "Facilite seu trabalho com um assistente que automatizará seu trabalho.",
+        url: "/",
       },
       {
-        img: 'engineering',
-        title: 'Ciência de Dados',
-        content: 'Facilite seu trabalho contratando um cientista de dados.',
-        url: '/'
+        img: "engineering",
+        title: "Ciência de Dados",
+        content: "Facilite seu trabalho contratando um cientista de dados.",
+        url: "/",
       },
       {
-        img: 'psychology',
-        title: 'Treinamento em Machine Learning',
-        content: 'Domine o aprendizado de máquina com Python e torne-se um cientista.',
-        url: '/'
+        img: "psychology",
+        title: "Treinamento em Machine Learning",
+        content:
+          "Domine o aprendizado de máquina com Python e torne-se um cientista.",
+        url: "/",
       },
-    ]
-  }
-
+    ],
+  },
 }
