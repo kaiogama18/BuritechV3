@@ -1,12 +1,12 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("/home/kaio/Documentos/GitHub/BuritechV3/node_modules/@reach/router/index.js"), require("crypto"), require("fs"), require("/home/kaio/Documentos/GitHub/BuritechV3/node_modules/lodash/merge.js"), require("path"), require("react"), require("react-dom/server"), require("react-helmet"));
+		module.exports = factory(require("/home/kaiogama/Documentos/Git/BuritechV3/node_modules/@reach/router/index.js"), require("crypto"), require("fs"), require("/home/kaiogama/Documentos/Git/BuritechV3/node_modules/lodash/merge.js"), require("path"), require("react"), require("react-dom/server"), require("react-helmet"));
 	else if(typeof define === 'function' && define.amd)
-		define("lib", ["/home/kaio/Documentos/GitHub/BuritechV3/node_modules/@reach/router/index.js", "crypto", "fs", "/home/kaio/Documentos/GitHub/BuritechV3/node_modules/lodash/merge.js", "path", "react", "react-dom/server", "react-helmet"], factory);
+		define("lib", ["/home/kaiogama/Documentos/Git/BuritechV3/node_modules/@reach/router/index.js", "crypto", "fs", "/home/kaiogama/Documentos/Git/BuritechV3/node_modules/lodash/merge.js", "path", "react", "react-dom/server", "react-helmet"], factory);
 	else if(typeof exports === 'object')
-		exports["lib"] = factory(require("/home/kaio/Documentos/GitHub/BuritechV3/node_modules/@reach/router/index.js"), require("crypto"), require("fs"), require("/home/kaio/Documentos/GitHub/BuritechV3/node_modules/lodash/merge.js"), require("path"), require("react"), require("react-dom/server"), require("react-helmet"));
+		exports["lib"] = factory(require("/home/kaiogama/Documentos/Git/BuritechV3/node_modules/@reach/router/index.js"), require("crypto"), require("fs"), require("/home/kaiogama/Documentos/Git/BuritechV3/node_modules/lodash/merge.js"), require("path"), require("react"), require("react-dom/server"), require("react-helmet"));
 	else
-		root["lib"] = factory(root["/home/kaio/Documentos/GitHub/BuritechV3/node_modules/@reach/router/index.js"], root["crypto"], root["fs"], root["/home/kaio/Documentos/GitHub/BuritechV3/node_modules/lodash/merge.js"], root["path"], root["react"], root["react-dom/server"], root["react-helmet"]);
+		root["lib"] = factory(root["/home/kaiogama/Documentos/Git/BuritechV3/node_modules/@reach/router/index.js"], root["crypto"], root["fs"], root["/home/kaiogama/Documentos/Git/BuritechV3/node_modules/lodash/merge.js"], root["path"], root["react"], root["react-dom/server"], root["react-helmet"]);
 })(this, function(__WEBPACK_EXTERNAL_MODULE__reach_router__, __WEBPACK_EXTERNAL_MODULE_crypto__, __WEBPACK_EXTERNAL_MODULE_fs__, __WEBPACK_EXTERNAL_MODULE_lodash_merge__, __WEBPACK_EXTERNAL_MODULE_path__, __WEBPACK_EXTERNAL_MODULE_react__, __WEBPACK_EXTERNAL_MODULE_react_dom_server__, __WEBPACK_EXTERNAL_MODULE_react_helmet__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -1736,23 +1736,47 @@ function stripPrefix(str, prefix) {
 /*!***********************!*\
   !*** ./gatsby-ssr.js ***!
   \***********************/
-/*! exports provided: wrapRootElement */
+/*! exports provided: wrapRootElement, replaceRenderer */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _gatsby_wrapRootElement__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./gatsby/wrapRootElement */ "./gatsby/wrapRootElement.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "wrapRootElement", function() { return _gatsby_wrapRootElement__WEBPACK_IMPORTED_MODULE_0__["wrapRootElement"]; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "replaceRenderer", function() { return replaceRenderer; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_dom_server__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/server */ "react-dom/server");
+/* harmony import */ var react_dom_server__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom_server__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
+/* harmony import */ var _gatsby_wrapRootElement__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./gatsby/wrapRootElement */ "./gatsby/wrapRootElement.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "wrapRootElement", function() { return _gatsby_wrapRootElement__WEBPACK_IMPORTED_MODULE_3__["wrapRootElement"]; });
 
- // import { wrapRootElement as wrap } from './gatsby/wrapRootElement'
-// export const wrapRootElement = wrap;
-// export const onRenderBody = ({
-//     setPostBodyComponents,
-// }) => {
-//     setPostBodyComponents([
-//         <script type="text/javascript" src="jquery.js" />
-//     ])
-// }
+ // import { Provider } from 'react-redux'
+// import createStore from './src/store'
+
+
+ // let store = null
+
+
+var replaceRenderer = function replaceRenderer(_ref) {
+  var element = _ref.element,
+      replaceBodyHTMLString = _ref.replaceBodyHTMLString,
+      setHeadComponents = _ref.setHeadComponents;
+  var sheet = new styled_components__WEBPACK_IMPORTED_MODULE_2__["ServerStyleSheet"](); // store = createStore()
+
+  var app = function app() {
+    return (
+      /*#__PURE__*/
+      // <Provider store={store}>
+      react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(styled_components__WEBPACK_IMPORTED_MODULE_2__["StyleSheetManager"], {
+        sheet: sheet.instance
+      }, wrapRootElement) // </Provider>
+
+    );
+  };
+
+  replaceBodyHTMLString(Object(react_dom_server__WEBPACK_IMPORTED_MODULE_1__["renderToString"])( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("app", null)));
+  setHeadComponents([sheet.getStyleElement()]);
+};
 
 /***/ }),
 
@@ -55057,7 +55081,6 @@ function _templateObject() {
 }
 
 
-
 var GlobalStyle = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["createGlobalStyle"])(_templateObject(), function (props) {
   return props.theme.fontColor;
 }, function (props) {
@@ -55120,9 +55143,9 @@ var scale = typography.scale,
 /***/ }),
 
 /***/ "@reach/router":
-/*!**********************************************************************************************!*\
-  !*** external "/home/kaio/Documentos/GitHub/BuritechV3/node_modules/@reach/router/index.js" ***!
-  \**********************************************************************************************/
+/*!***********************************************************************************************!*\
+  !*** external "/home/kaiogama/Documentos/Git/BuritechV3/node_modules/@reach/router/index.js" ***!
+  \***********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -55153,9 +55176,9 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_fs__;
 /***/ }),
 
 /***/ "lodash/merge":
-/*!***************************************************************************************!*\
-  !*** external "/home/kaio/Documentos/GitHub/BuritechV3/node_modules/lodash/merge.js" ***!
-  \***************************************************************************************/
+/*!****************************************************************************************!*\
+  !*** external "/home/kaiogama/Documentos/Git/BuritechV3/node_modules/lodash/merge.js" ***!
+  \****************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
