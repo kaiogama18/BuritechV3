@@ -2,7 +2,7 @@
 
 
 ### Contributors
-This project exists thanks to all the people who contribute. 
+Site oficial da buritech soluções em machine learning
 
 <a alt="Linkedin" href="https://www.linkedin.com/in/kaiogama/"><img src="https://img.shields.io/badge/Linkedin-Kaio%20B.%20Gama-blue?logo=linkedin"/></a>
 <a alt="Github" href="https://github.com/kaiogama18"><img src="https://img.shields.io/badge/Github-Kaio%20B.%20Gama-lightgrey?logo=github"/></a>
@@ -21,6 +21,5 @@ This project exists thanks to all the people who contribute.
 
 ## License
 
-**Wedo Market** [MIT licensed](./LICENSE)
+**Buritech** [MIT licensed](./LICENSE)
 
-License and is available for free.
