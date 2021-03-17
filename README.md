@@ -7,14 +7,6 @@ Site oficial da buritech soluções em machine learning
 <a alt="Linkedin" href="https://www.linkedin.com/in/kaiogama/"><img src="https://img.shields.io/badge/Linkedin-Kaio%20B.%20Gama-blue?logo=linkedin"/></a>
 <a alt="Github" href="https://github.com/kaiogama18"><img src="https://img.shields.io/badge/Github-Kaio%20B.%20Gama-lightgrey?logo=github"/></a>
 
-
-//<p align="center">
-  //<a href="http://buritech.netlify.app/">
-   // <img alt="logo Buritech" style="fill: blue;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpOsSdm7UqW0eBjzYPyP4wWou-5a6nku8SmQ&usqp=CAU" width="50%" />
-  //</a>
-//</p>
-
-
   ![2021-03-16 23 50 22 buritech netlify app 5afeb292a0ef](https://user-images.githubusercontent.com/15802576/111412318-94949c00-86b2-11eb-8da4-12fb9d08e00d.png)
 
 <p align="center">
