@@ -23,3 +23,4 @@ Site oficial da buritech soluções em machine learning
 
 **Buritech** [MIT licensed](./LICENSE)
 
+![qrcode_buritech netlify app](https://user-images.githubusercontent.com/15802576/111412046-0f10ec00-86b2-11eb-9e65-682739409656.png)
