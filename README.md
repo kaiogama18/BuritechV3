@@ -19,7 +19,7 @@ Site oficial da buritech soluções em machine learning feito em React Gatsby
 
 ## Lighthouse 
 
-![buriPWA](https://user-images.githubusercontent.com/15802576/111569542-3f6f8d80-8779-11eb-9fa0-1af0b8d8256b.png)
+![buriPWA](https://user-images.githubusercontent.com/15802576/111569579-51e9c700-8779-11eb-80c6-aed59ea3ad7a.png)
 
 
 ## License
