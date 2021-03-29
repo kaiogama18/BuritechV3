@@ -17,9 +17,9 @@ Site oficial da buritech soluções em machine learning feito em React Gatsby
   <img src="https://img.shields.io/npm/v/react.svg?style=flat" alt="npm version ">
 </p>
 
-//## Lighthouse 
+## Test in Lighthouse Google
 
-// ![buriPWA](https://user-images.githubusercontent.com/15802576/111569579-51e9c700-8779-11eb-80c6-aed59ea3ad7a.png)
+![buriPWA](https://user-images.githubusercontent.com/15802576/111569579-51e9c700-8779-11eb-80c6-aed59ea3ad7a.png)
 
 
 ## License
