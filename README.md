@@ -1,7 +1,4 @@
-# Site - Buritech
-
-
-## Ofiical Link: https://buritech.netlify.app/
+# Oficial Link Buritech: https://buritech.netlify.app/
 
 ### Contributors
 Site oficial da buritech soluções em machine learning feito em React Gatsby
