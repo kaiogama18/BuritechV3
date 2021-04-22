@@ -1,6 +1,6 @@
 ## Oficial Link Buritech: https://buritech.netlify.app/
 
-### Contributors
+### Contributors Kaio B. Gama
 Official website of buritech machine learning solutions made in React Gatsby
 
 Site oficial da buritech soluções em machine learning feito em React Gatsby 
