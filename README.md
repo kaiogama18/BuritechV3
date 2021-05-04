@@ -24,7 +24,7 @@ Site oficial da buritech soluções em machine learning feito em React Gatsby
 
 ![buriPWA](https://user-images.githubusercontent.com/15802576/111569579-51e9c700-8779-11eb-80c6-aed59ea3ad7a.png)
 
-## License **Buritech** [MIT licensed](./LICENSE)
+<!-- ## License **Buritech** [MIT licensed](./LICENSE) -->
 
 
 
